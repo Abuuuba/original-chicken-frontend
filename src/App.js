@@ -558,7 +558,7 @@ const App = () => {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="L'Original Fried Chicken Location"
+              title="Original Fried Chicken Location"
             ></iframe>
           </div>
         </div>
@@ -579,7 +579,7 @@ const App = () => {
         <div className="prose prose-invert max-w-none">
           <div className="legal-content">
             <h3>Informations légales</h3>
-            <p><strong>Raison sociale :</strong> L'Original Fried Chicken</p>
+            <p><strong>Raison sociale :</strong> Original Fried Chicken</p>
             <p><strong>Catégorie :</strong> Restauration rapide</p>
             <p><strong>Adresse :</strong> 4 Rue du Midi, 31270 Frouzins, France</p>
             <p><strong>Téléphone :</strong> 05 67 22 60 55</p>
@@ -611,7 +611,7 @@ const App = () => {
       <footer className="bg-black py-8 border-t border-red-600/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
-            © 2024 L'Original Fried Chicken - Tous droits réservés
+            © 2024 Original Fried Chicken - Tous droits réservés
           </p>
         </div>
       </footer>

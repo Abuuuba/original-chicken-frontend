@@ -619,4 +619,4 @@ const App = () => {
   );
 };
 
-export default App; Met ca en fichier javascript 
+export default App;

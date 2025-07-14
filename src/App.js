@@ -20,7 +20,7 @@ const App = () => {
   const menuCategories = [
     { id: 'viandes', name: 'Viandes & Compositions', icon: '🍗' },
     { id: 'burgers', name: 'Burgers', icon: '🍔' },
-    { id: 'snacks', name: 'TEX-MEX', icon: '🍟' },
+    { id: 'texmex', name: 'Tex Mex', icon: '🍟' },
     { id: 'tacos', name: 'Tacos & Sandwichs', icon: '🌮' },
     { id: 'salades', name: 'Salades et Assiettes', icon: '🥗' },
     { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '👨‍👩‍👧‍👦' },

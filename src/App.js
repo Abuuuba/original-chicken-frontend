@@ -51,7 +51,7 @@ const App = () => {
       { name: 'Beef Supreme', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Steak, galette, Cheddar, Salade, Sauce Biggy' },
       { name: 'Hot Dog', price: '5€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders crispy maison, Saucisse crispy maison' }
     ],
-    snacks: [
+    TEX-MEX: [
       { name: 'Hot Wings', price: '5 pièces 4€ / 10 pièces 7,50€', ingredients: 'Ailes de poulet épicées (Menu 8€)' },
       { name: 'Tenders', price: '5 pièces 5,50€ / 10 pièces 10,50€', ingredients: 'Lamelles de poulet croustillantes (Menu 9€)' },
       { name: 'Nuggets', price: '5 pièces 3,50€ / 10 pièces 6,50€', ingredients: 'Nuggets de poulet (Menu 7€)' },

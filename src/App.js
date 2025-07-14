@@ -20,8 +20,13 @@ const App = () => {
   const menuCategories = [
     { id: 'viandes', name: 'Viandes & Compositions', icon: '🍗' },
     { id: 'burgers', name: 'Burgers', icon: '🍔' },
-    { id: 'snacks', name: 'Tex-Mex & Petites Faims', icon: '🍟' },
-    { id: 'tacos', name: 'Tacos & Sandwichs', icon: '🌮' },
+    { id: 'snacks', name: 'Tex-Mex
+  - Samoussas : 2 pièces = 3 €, 5 pièces = 7 € & Petites Faims', icon: '🍟' },
+    { id: 'tacos', name: 'Tacos & Sandwichs
+  - Pain Nan
+  - Pain Nan Fromage
+  - Pain Rond
+  - Galette', icon: '🌮' },
     { id: 'salades', name: 'Salades & Assiettes', icon: '🥗' },
     { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '👨‍👩‍👧‍👦' },
     { id: 'bowls', name: 'Bowls Indiens', icon: '🍛' },
@@ -38,22 +43,22 @@ const App = () => {
       { name: 'Steak haché', price: 'Coin Compositions', ingredients: 'Steak haché 100% bœuf' },
       { name: 'Falafel', price: 'Coin Compositions', ingredients: 'Boulettes de pois chiches végétariennes' },
       { name: 'Cordon bleu', price: 'Coin Compositions', ingredients: 'Escalope panée jambon-fromage' },
-      { name: 'Tenders (ajouté : option 3 pièces à 3,50 €)', price: 'Coin Compositions', ingredients: 'Lamelles de poulet croustillantes' }
+      { name: 'Tenders 
     ],
     burgers: [
       { name: 'Cheese Burger', price: '5,50€ (Seul) / 7€ (Menu)', ingredients: 'Steak, Cheddar, salade avec oignons frais, Sauce Biggy' },
       { name: 'Double Cheese', price: '6,50€ (Seul) / 8€ (Menu)', ingredients: 'Double steak, Cheddar, salade avec oignons frais, Sauce Biggy' },
-      { name: 'Tenders (ajouté : option 3 pièces à 3,50 €) Burger', price: '6€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders (ajouté : option 3 pièces à 3,50 €), Cheddar, salade avec oignons frais, Mayonnaise' },
-      { name: 'Tower Burger', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Tenders (ajouté : option 3 pièces à 3,50 €), galette de pomme de terre, Cheddar, salade avec oignons frais, Mayonnaise' },
-      { name: 'Raclette Tower (avec sauce blanche)', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Tenders (ajouté : option 3 pièces à 3,50 €), galette, Raclette, salade avec oignons frais, Sauce Poivre' },
-      { name: 'Original Mix', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Steak + 2 Tenders (ajouté : option 3 pièces à 3,50 €) + Bacon + salade avec oignons frais + Sauces Blanche & Poivre' },
+      { name: 'Tenders 
+      { name: 'Tower Burger', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Tenders 
+      { name: 'Raclette Tower (avec sauce blanche)', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Tenders 
+      { name: 'Original Mix', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Steak + 2 Tenders 
       { name: 'Naan Burger', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Viande au choix, pain naan, salade avec oignons frais, Sauce' },
       { name: 'Beef Supreme', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Steak, galette, Cheddar, salade avec oignons frais, Sauce Biggy' },
-      { name: 'Hot Dog (option Saucisse Crispy ou classique)', price: '5€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders (ajouté : option 3 pièces à 3,50 €) crispy maison, Saucisse crispy maison' }
+      { name: 'Hot Dog (option Saucisse Crispy ou classique)', price: '5€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders 
     ],
     snacks: [
       { name: 'Hot Wings', price: '5 pièces 4€ / 10 pièces 7,50€', ingredients: 'Ailes de poulet épicées (Menu 8€)' },
-      { name: 'Tenders (ajouté : option 3 pièces à 3,50 €)', price: '5 pièces 5,50€ / 10 pièces 10,50€', ingredients: 'Lamelles de poulet croustillantes (Menu 9€)' },
+      { name: 'Tenders 
       { name: 'Nuggets', price: '5 pièces 3,50€ / 10 pièces 6,50€', ingredients: 'Nuggets de poulet (Menu 7€)' },
       { name: 'Chicken solo', price: '8,50€', ingredients: 'Pièce de poulet signature' },
       { name: 'Nems', price: '4p. 5€ / 10p. 9,50€', ingredients: 'Nems croustillants aux légumes' },
@@ -68,19 +73,19 @@ const App = () => {
       { name: 'Sandwich', price: '6€ (Seul) / 7€ (Frites) / 8€ (Menu)', ingredients: 'Sandwich avec viande au choix' }
     ],
     salades: [
-      { name: 'salade avec oignons frais Tenders (ajouté : option 3 pièces à 3,50 €)', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'salade avec oignons frais, Tenders (ajouté : option 3 pièces à 3,50 €), Tomates, Olives' },
+      { name: 'salade avec oignons frais Tenders 
       { name: 'salade avec oignons frais Tikka', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'salade avec oignons frais, Poulet Tikka, Tomates, Olives' },
       { name: 'salade avec oignons frais Royal', price: '9€ (Seul) / 10,50€ (Menu)', ingredients: 'salade avec oignons frais, 2 viandes au choix, Tomates, Olives, Fromage' }
     ],
     famille: [
-      { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders (ajouté : option 3 pièces à 3,50 €) + Frites + Caprisun' },
+      { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders 
       { name: 'Family 1', price: '25,90€', ingredients: '35 Wings + 4 Frites + 1,5L boisson' },
-      { name: 'Family 2', price: '25,90€', ingredients: '18 Tenders (ajouté : option 3 pièces à 3,50 €) + 15 Wings + 1,5L boisson' },
-      { name: 'Family 3', price: '25,90€', ingredients: '10 Tenders (ajouté : option 3 pièces à 3,50 €) + 15 Wings + 4 Frites + 1,5L boisson' },
-      { name: 'Bucket 1', price: '20,90€', ingredients: '12 Tenders (ajouté : option 3 pièces à 3,50 €) + 2 Frites + 2 Canettes' },
+      { name: 'Family 2', price: '25,90€', ingredients: '18 Tenders 
+      { name: 'Family 3', price: '25,90€', ingredients: '10 Tenders 
+      { name: 'Bucket 1', price: '20,90€', ingredients: '12 Tenders 
       { name: 'Bucket 2', price: '20,90€', ingredients: '20 Wings + 2 Frites + 2 Canettes' },
-      { name: 'Bucket 3', price: '20,90€', ingredients: '5 Tenders (ajouté : option 3 pièces à 3,50 €) + 10 Wings + 2 Frites + 2 Canettes' },
-      { name: 'Party Deal', price: '55€', ingredients: '2 Tenders (ajouté : option 3 pièces à 3,50 €) Burger + 2 Cheese Burger + 2 Tacos Kebab + 8 Tenders (ajouté : option 3 pièces à 3,50 €) + 12 Wings + 6 Frites + 1,5L boisson' }
+      { name: 'Bucket 3', price: '20,90€', ingredients: '5 Tenders 
+      { name: 'Party Deal', price: '55€', ingredients: '2 Tenders 
     ],
     bowls: [
       { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites (bol carton)' },
@@ -102,7 +107,7 @@ const App = () => {
   // Our specialties data with new relevant images
   const specialties = [
     {
-      name: 'Tenders (ajouté : option 3 pièces à 3,50 €) Croustillants',
+      name: 'Tenders 
       image: 'https://images.unsplash.com/photo-1619019187211-adf2f6119afd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1NzZ8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwdGVuZGVyc3xlbnwwfHx8fDE3NTIzNDYwNTV8MA&ixlib=rb-4.1.0&q=85',
       description: 'Lamelles de poulet croustillantes et savoureuses'
     },
@@ -611,7 +616,7 @@ const App = () => {
       <footer className="bg-black py-8 border-t border-red-600/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-gray-400">
-            © 2024 Original Fried Chicken - Tous droits réservés
+            © 2025 Original Fried Chicken - Tous droits réservés
           </p>
         </div>
       </footer>

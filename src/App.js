@@ -20,12 +20,12 @@ const App = () => {
   const menuCategories = [
     { id: 'viandes', name: 'Viandes & Compositions', icon: '🍗' },
     { id: 'burgers', name: 'Burgers', icon: '🍔' },
-    { id: 'snacks', name: 'Snacks & Petites Faims', icon: '🍟' },
+    { id: 'snacks', name: 'TEX-MEX', icon: '🍟' },
     { id: 'tacos', name: 'Tacos & Sandwichs', icon: '🌮' },
-    { id: 'salades', name: 'Salades', icon: '🥗' },
+    { id: 'salades', name: 'Salades et Assiettes', icon: '🥗' },
     { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '👨‍👩‍👧‍👦' },
     { id: 'bowls', name: 'Bowls Indiens', icon: '🍛' },
-    { id: 'boissons', name: 'Boissons & Desserts', icon: '🥤' }
+    { id: 'boissons', name: 'Boissons, Desserts et Menu Enfant', icon: '🥤' }
   ];
 
   // Real menu items for each category

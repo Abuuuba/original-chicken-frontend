@@ -22,17 +22,17 @@ const App = () => {
     { id: 'burgers', name: 'Burgers', icon: '🍔' },
     { id: 'snacks', name: 'TEX-MEX', icon: '🍟' },
     { id: 'tacos', name: 'Tacos & Sandwichs', icon: '🌮' },
-    { id: 'salade', name: 'Salades', icon: '🥗' },
+    { id: 'salade', name: 'Assiettes & Salades', icon: '🥗' },
     { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '👨‍👩‍👧‍👦' },
     { id: 'bowls', name: 'Bowls Indiens', icon: '🍛' },
-    { id: 'boissons', name: 'Boissons & Desserts et menu enfats', icon: '🥤' }
+    { id: 'boissons', name: 'Boissons & Desserts et menu enfants', icon: '🥤' }
   ];
 
   // Real menu items for each category
   const menuItems = {
     viandes: [
       { name: 'Kebab', price: 'Coin Compositions', ingredients: 'Viande Kebab fraîche' },
-      { name: 'Chicken Tikka', price: 'Coin Compositions', ingredients: 'Poulet mariné aux épices indiennes' },
+      { name: 'Chicken Tikka Masala', price: 'Coin Compositions', ingredients: 'Poulet mariné aux épices indiennes' },
       { name: 'Chicken', price: 'Coin Compositions', ingredients: 'Poulet grillé nature' },
       { name: 'Nugget', price: 'Coin Compositions', ingredients: 'Nuggets de poulet croustillants' },
       { name: 'Steak haché', price: 'Coin Compositions', ingredients: 'Steak haché 100% bœuf' },
@@ -45,17 +45,17 @@ const App = () => {
       { name: 'Double Cheese', price: '6,50€ (Seul) / 8€ (Menu)', ingredients: 'Double steak, Cheddar, Salade, Sauce Biggy' },
       { name: 'Tenders Burger', price: '6€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders, Cheddar, Salade, Mayonnaise' },
       { name: 'Tower Burger', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Tenders, galette de pomme de terre, Cheddar, Salade, Mayonnaise' },
-      { name: 'Raclette Tower', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Tenders, galette, Raclette, Salade, Sauce Poivre' },
+      { name: 'Raclette Tower', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Tenders, galette, Raclette, Salade, Sauce Poivre, Sauce Blanche' },
       { name: 'Original Mix', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Steak + 2 Tenders + Bacon + Salade + Sauces Blanche & Poivre' },
       { name: 'Naan Burger', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Viande au choix, pain naan, Salade, Sauce' },
       { name: 'Beef Supreme', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Steak, galette, Cheddar, Salade, Sauce Biggy' },
-      { name: 'Hot Dog', price: '5€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders crispy maison, Saucisse crispy maison' }
+      { name: 'Hot Dog', price: '5€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders crispy maison ou Saucisse crispy maison' }
     ],
     snacks: [
       { name: 'Hot Wings', price: '5 pièces 4€ / 10 pièces 7,50€', ingredients: 'Ailes de poulet épicées (Menu 8€)' },
-      { name: 'Tenders', price: '5 pièces 5,50€ / 10 pièces 10,50€', ingredients: 'Lamelles de poulet croustillantes (Menu 9€)' },
+      { name: 'Tenders', price: '3 pièces 3,50€ / 5 pièces 5,50€ / 10 pièces 10,50€', ingredients: 'Lamelles de poulet croustillantes (Menu 9€)' },
       { name: 'Nuggets', price: '5 pièces 3,50€ / 10 pièces 6,50€', ingredients: 'Nuggets de poulet (Menu 7€)' },
-      { name: 'Nems (faits maison)', price: '4p. 5€ / 10p. 9,50€', ingredients: 'Nems faits maison aux légumes 🍴' },
+      { name: 'Nems maison', price: '4p. 5€ / 10p. 9,50€', ingredients: 'Nems faits maison aux légumes' },
       { name: 'Bouchées Camembert', price: '5p. 4€ / 10p. 7€', ingredients: 'Bouchées de camembert panées' },
       { name: 'Onion Rings', price: '5p. 3€ / 10p. 6€', ingredients: 'Rondelles d\'oignon croustillantes' },
       { name: 'Mozza Sticks', price: '5p. 4€ / 10p. 6,50€', ingredients: 'Bâtonnets de mozzarella panés' }
@@ -70,7 +70,11 @@ const App = () => {
       { name: 'Salade Tenders', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Tenders, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
       { name: 'Salade Tikka', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Poulet Tikka, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
       { name: 'Salade Royal', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' }
-    ],
+      { name: 'Chicken Tandori', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Salade, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },
+      { name: 'KING Chicken Tandori', price: '12€ (Seul) / 15€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },
+      { name: 'Assiette Simple', price: '10€ (Seul) / 12€ (Menu)', ingredients: '1 viande au choix, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
+      { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },       
+       ],
     famille: [
       { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders + Frites + Caprisun' },
       { name: 'Family 1', price: '25,90€', ingredients: '35 Wings + 4 Frites + 1,5L boisson' },

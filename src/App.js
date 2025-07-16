@@ -20,12 +20,12 @@ const App = () => {
   const menuCategories = [
     { id: 'viandes', name: 'Viandes & Compositions', icon: '🍗' },
     { id: 'burgers', name: 'Burgers', icon: '🍔' },
-    { id: 'texmex', name: 'TEX-MEX', icon: '🍟' },
+    { id: 'snacks', name: 'TEX-MEX', icon: '🍟' },
     { id: 'tacos', name: 'Tacos & Sandwichs', icon: '🌮' },
     { id: 'salade', name: 'Salades', icon: '🥗' },
     { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '👨‍👩‍👧‍👦' },
     { id: 'bowls', name: 'Bowls Indiens', icon: '🍛' },
-    { id: 'boissons', name: 'Boissons & Desserts', icon: '🥤' }
+    { id: 'boissons', name: 'Boissons & Desserts et menu enfats', icon: '🥤' }
   ];
 
   // Real menu items for each category
@@ -51,7 +51,7 @@ const App = () => {
       { name: 'Beef Supreme', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Steak, galette, Cheddar, Salade, Sauce Biggy' },
       { name: 'Hot Dog', price: '5€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders crispy maison, Saucisse crispy maison' }
     ],
-    TEX-MEXs: [
+    snacks: [
       { name: 'Hot Wings', price: '5 pièces 4€ / 10 pièces 7,50€', ingredients: 'Ailes de poulet épicées (Menu 8€)' },
       { name: 'Tenders', price: '5 pièces 5,50€ / 10 pièces 10,50€', ingredients: 'Lamelles de poulet croustillantes (Menu 9€)' },
       { name: 'Nuggets', price: '5 pièces 3,50€ / 10 pièces 6,50€', ingredients: 'Nuggets de poulet (Menu 7€)' },

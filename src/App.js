@@ -71,10 +71,11 @@ const App = () => {
       { name: 'Salade Tenders', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Tenders, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
       { name: 'Salade Tikka', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Poulet Tikka, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
       { name: 'Salade Royal', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
-      { name: 'Chicken Tandori', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Salade, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },
-      { name: 'KING Chicken Tandori', price: '12€ (Seul) / 15€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },
+      { name: 'Chicken Tandori', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Salade, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },
+      { name: 'KING Chicken Tandori', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 Cuisse de poulet Tandoori, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },
       { name: 'Assiette Simple', price: '10€ (Seul) / 12€ (Menu)', ingredients: '1 viande au choix, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
-      { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },       
+      { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' }, 
+      { name: 'supplements', price: 'naan ou naan garlic 2,50€' },       
        ],
     famille: [
       { name: 'Family 1', price: '25,90€', ingredients: '35 Wings + 4 Frites + 1,5L boisson' },
@@ -92,7 +93,7 @@ const App = () => {
       { name: 'Chicken Tikka Masala Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Tikka, Sauce parfumée aux amandes, Légèrement sucrée' },
       { name: 'Butter Chicken Bowl', price: '11,90€', ingredients: 'Riz Pulao + Butter Chicken, Beurre légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
       { name: 'Chicken Kurma Bowl', price: '11,90€', ingredients: 'Riz Pulao + Kurma Chicken légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
-      { name: 'supplements', price: 'naan ou naan garlic 2,50€ / Riz petit 3€/ Riz grand 4,50€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },      
+      { name: 'supplements', price: 'naan ou naan garlic 2,50€ / Riz petit 3€/ Riz grand 4,50€' },      
     ],
     boissons: [
       { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders + Frites + Caprisun' },
@@ -122,7 +123,7 @@ const App = () => {
       description: 'Saveurs authentiques indiennes en bowl'
     },
     {
-      name: 'Salade Fraîche',
+      name: 'Salade',
       image: 'https://images.unsplash.com/photo-1522251253478-4cae03d93949?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzZ8MHwxfHNlYXJjaHwyfHxjaGlja2VuJTIwc2FsYWR8ZW58MHx8fHwxNzUyMzQ2MDc2fDA&ixlib=rb-4.1.0&q=85',
       description: 'Salade gourmande au poulet grillé'
     }

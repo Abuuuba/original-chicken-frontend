@@ -52,13 +52,14 @@ const App = () => {
       { name: 'Hot Dog', price: '5€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders crispy maison ou Saucisse crispy maison' }
     ],
     snacks: [
-      { name: 'Hot Wings', price: '5 pièces 4€ / 10 pièces 7,50€', ingredients: 'Ailes de poulet épicées (Menu 8€)' },
-      { name: 'Tenders', price: '3 pièces 3,50€ / 5 pièces 5,50€ / 10 pièces 10,50€', ingredients: 'Lamelles de poulet croustillantes (Menu 9€)' },
-      { name: 'Nuggets', price: '5 pièces 3,50€ / 10 pièces 6,50€', ingredients: 'Nuggets de poulet (Menu 7€)' },
-      { name: 'Nems maison', price: '4p. 5€ / 10p. 9,50€', ingredients: 'Nems faits maison aux légumes' },
-      { name: 'Bouchées Camembert', price: '5p. 4€ / 10p. 7€', ingredients: 'Bouchées de camembert panées' },
-      { name: 'Onion Rings', price: '5p. 3€ / 10p. 6€', ingredients: 'Rondelles d\'oignon croustillantes' },
-      { name: 'Mozza Sticks', price: '5p. 4€ / 10p. 6,50€', ingredients: 'Bâtonnets de mozzarella panés' }
+      { name: 'Hot Wings', price: '5p 4€ / 10p 7,50€', ingredients: 'Ailes de poulet épicées (Menu 8€)' },
+      { name: 'Tenders', price: '3p 3,50€ / 5p 5,50€ / 10 pièces 10,50€', ingredients: 'Lamelles de poulet croustillantes (Menu 9€)' },
+      { name: 'Nuggets', price: '5p 3,50€ / 10p 6,50€', ingredients: 'Nuggets de poulet (Menu 7€)' },
+      { name: 'Nems maison', price: '4p 5€ / 10p 9,50€', ingredients: 'Nems faits maison aux légumes' },
+      { name: 'Bouchées Camembert', price: '5p 4€ / 10p 7€', ingredients: 'Bouchées de camembert panées' },
+      { name: 'Onion Rings', price: '5p 3€ / 10p 6€', ingredients: 'Rondelles d\'oignon croustillantes' },
+      { name: 'Mozza Sticks', price: '5p 4€ / 10p 6,50€', ingredients: 'Bâtonnets de mozzarella panés' },
+      { name: 'Samoussa', price: '2p 3€ / 5p 7€', ingredients: 'Samoussa Maison' },      
     ],
     tacos: [
       { name: 'Tacos Simple', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Tacos avec 1 viande au choix' },

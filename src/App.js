@@ -77,7 +77,6 @@ const App = () => {
       { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },       
        ],
     famille: [
-      { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders + Frites + Caprisun' },
       { name: 'Family 1', price: '25,90€', ingredients: '35 Wings + 4 Frites + 1,5L boisson' },
       { name: 'Family 2', price: '25,90€', ingredients: '18 Tenders + 15 Wings + 1,5L boisson' },
       { name: 'Family 3', price: '25,90€', ingredients: '10 Tenders + 15 Wings + 4 Frites + 1,5L boisson' },
@@ -95,11 +94,12 @@ const App = () => {
       { name: 'Chicken Kurma Bowl', price: '11,90€', ingredients: 'Riz Pulao + Kurma Chicken' }
     ],
     boissons: [
+      { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders + Frites + Caprisun' },
       { name: 'Boissons 33cl', price: '1,70€', ingredients: 'Coca, Fanta, Sprite, Ice Tea...' },
       { name: 'Boissons 1,5L', price: '3€', ingredients: 'Grande bouteille au choix' },
       { name: 'Tiramisu', price: '3€', ingredients: 'Tiramisu maison' },
       { name: 'Naan Nutella', price: '3€', ingredients: 'Pain naan fourré au Nutella' },
-      { name: 'Glace', price: '2,50€', ingredients: 'Glace au choix' }
+      { name: 'Glace', price: '2,50€', ingredients: 'Glace au choix' },
     ]
   };
 

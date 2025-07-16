@@ -24,7 +24,7 @@ const App = () => {
     { id: 'tacos', name: 'Tacos & Sandwichs', icon: '🌮' },
     { id: 'salade', name: 'Assiettes & Salades', icon: '🥗' },
     { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '👨‍👩‍👧‍👦' },
-    { id: 'bowls', name: 'Bowls Indiens', icon: '🍛' },
+    { id: 'bowls', name: 'Spécialité Indian Bowls', icon: '🍛' },
     { id: 'boissons', name: 'Boissons & Desserts et menu enfants', icon: '🥤' }
   ];
 
@@ -64,6 +64,7 @@ const App = () => {
     tacos: [
       { name: 'Tacos Simple', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Tacos avec 1 viande au choix' },
       { name: 'Tacos Double', price: '8€ (Seul) / 9,50€ (Frites) / 10,50€ (Menu)', ingredients: 'Tacos avec 2 viandes au choix' },
+      { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },      
       { name: 'Tacos XL', price: '10,50€ (Seul) / 11,50€ (Frites) / 12,50€ (Menu)', ingredients: 'Grand tacos avec 3 viandes au choix' },
       { name: 'Sandwich', price: '6€ (Seul) / 7€ (Frites) / 8€ (Menu)', ingredients: 'Sandwich avec viande au choix. Choix de pain : Pain Naan, Pain Naan Fromage, Pain Rond, Galette' }
     ],
@@ -86,7 +87,6 @@ const App = () => {
       { name: 'Party Deal', price: '55€', ingredients: '2 Tenders Burger + 2 Cheese Burger + 2 Tacos Kebab + 8 Tenders + 12 Wings + 6 Frites + 1,5L boisson' }
     ],
     bowls: [
-      { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },
       { name: 'Chicken Birani Bowl', price: '11,90€', ingredients: 'Riz Pulao + Egg Bhudiya, Cuisson traditionnelle avec riz, ail, oignon, amandes, accompagné de curry de légumes' },
       { name: 'Chicken Curry Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Cuisson traditionnelle en sauce curry, avec amandes, yaourt et crème fraîche' },
       { name: 'Chicken Tikka Masala Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Tikka, Sauce parfumée aux amandes, Légèrement sucrée' },

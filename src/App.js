@@ -86,12 +86,13 @@ const App = () => {
       { name: 'Party Deal', price: '55€', ingredients: '2 Tenders Burger + 2 Cheese Burger + 2 Tacos Kebab + 8 Tenders + 12 Wings + 6 Frites + 1,5L boisson' }
     ],
     bowls: [
-      { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites (bol carton)' },
-      { name: 'Birani Bowl', price: '11,90€', ingredients: 'Riz Pulao + Egg Bhudiya (bol carton)' },
-      { name: 'Chicken Curry Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet curry' },
-      { name: 'Chicken Tikka Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Tikka' },
-      { name: 'Butter Chicken Bowl', price: '10,90€', ingredients: 'Riz Pulao + Butter Chicken' },
-      { name: 'Chicken Kurma Bowl', price: '11,90€', ingredients: 'Riz Pulao + Kurma Chicken' }
+      { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },
+      { name: 'Birani Bowl', price: '11,90€', ingredients: 'Riz Pulao + Egg Bhudiya, Cuisson traditionnelle avec riz, ail, oignon, amandes, accompagné de curry de légumes' },
+      { name: 'Chicken Curry Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Cuisson traditionnelle en sauce curry, avec amandes, yaourt et crème fraîche' },
+      { name: 'Chicken Tikka Masala Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Tikka, Sauce parfumée aux amandes, Légèrement sucrée' },
+      { name: 'Butter Chicken Bowl', price: '11,90€', ingredients: 'Riz Pulao + Butter Chicken, Beurre légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
+      { name: 'Chicken Kurma Bowl', price: '11,90€', ingredients: 'Riz Pulao + Kurma Chicken légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
+      { name: 'supplements', price: 'naan ou naan garlic 2,50€ / Riz petit 3€/ Riz grand 4,50€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },      
     ],
     boissons: [
       { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders + Frites + Caprisun' },

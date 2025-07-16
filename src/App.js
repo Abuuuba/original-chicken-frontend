@@ -407,7 +407,7 @@ const App = () => {
               <div className="bg-red-900/20 backdrop-blur-md border border-red-500/30 rounded-lg p-6 mb-6">
                 <h4 className="text-xl font-bold text-red-500 mb-3 urban-font">Sauces Gratuites</h4>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Blanche • Ketchup • Algérienne • Mayo • Biggy • Burger • Barbecue • Harissa • Samouraï • Andalouse • Poivre • Thaï Chili
+                  Blanche • Ketchup • Algérienne • Mayo • Biggy Burger • Curry • Barbecue • Harissa • Samouraï • Andalouse • Poivre • Thaï Chili
                 </p>
               </div>
               <div className="bg-yellow-900/20 backdrop-blur-md border border-yellow-500/30 rounded-lg p-6">

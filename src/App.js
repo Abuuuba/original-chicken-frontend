@@ -136,7 +136,41 @@ const App = () => {
             <h1 className="text-2xl font-bold text-red-500 urban-font">
               Original Fried Chicken
             </h1>
-          </div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
           
           {/* Desktop Navigation */}
           <div className="hidden md:block">
@@ -165,8 +199,76 @@ const App = () => {
               >
                 Mentions légales
               </button>
-            </div>
-          </div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
           {/* Mobile menu button */}
           <div className="md:hidden">
@@ -178,8 +280,76 @@ const App = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             </button>
-          </div>
-        </div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
@@ -209,10 +379,112 @@ const App = () => {
               >
                 Mentions légales
               </button>
-            </div>
-          </div>
-        )}
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+        )}
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
     </nav>
   );
 
@@ -225,9 +497,111 @@ const App = () => {
           alt="Original Chicken - Bols Indiens"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 to-transparent"></div>
+        <div className="absolute inset-0 bg-black/60">
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 to-transparent">
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
       
       <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
         <h1 className="text-6xl md:text-8xl font-bold mb-6 urban-font text-shadow-lg">
@@ -246,21 +620,191 @@ const App = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
           </svg>
         </button>
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
       {/* Scroll indicator */}
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
-        </div>
+          <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse">
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
     </section>
   );
 
   // Specialties Section
   const SpecialtiesSection = () => (
     <section className="py-20 bg-concrete-texture relative">
-      <div className="absolute inset-0 bg-black/80"></div>
+      <div className="absolute inset-0 bg-black/80">
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-4 urban-font">
@@ -269,7 +813,41 @@ const App = () => {
           <p className="text-xl text-gray-300">
             Découvrez nos spécialités qui font notre réputation
           </p>
-        </div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {specialties.map((specialty, index) => (
@@ -280,8 +858,76 @@ const App = () => {
                   alt={specialty.name}
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
               <div className="p-6">
                 <h3 className="text-xl font-bold text-white mb-2 urban-font">
                   {specialty.name}
@@ -289,10 +935,112 @@ const App = () => {
                 <p className="text-gray-400">
                   {specialty.description}
                 </p>
-              </div>
-            </div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
           ))}
-        </div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
         {/* Indian Bowls Examples Section */}
         <div className="mt-20">
@@ -303,7 +1051,41 @@ const App = () => {
             <p className="text-lg text-gray-300">
               Découvrez nos authentiques bowls aux saveurs de l'Inde
             </p>
-          </div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
           
           <div className="flex justify-center">
             <div className="specialty-card group max-w-md">
@@ -313,8 +1095,76 @@ const App = () => {
                   alt="Bowl Biryani Indien"
                   className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
               <div className="p-6 text-center">
                 <h4 className="text-xl font-bold text-white mb-2 urban-font">
                   Biryani Bowl Exemple
@@ -328,11 +1178,181 @@ const App = () => {
                 >
                   Voir tous nos bowls →
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
     </section>
   );
 
@@ -347,7 +1367,41 @@ const App = () => {
           <p className="text-xl text-gray-300">
             Explorez toutes nos catégories de délices
           </p>
-        </div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
         {!selectedCategory ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -360,19 +1414,223 @@ const App = () => {
                 <div className="text-center">
                   <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
                     {category.icon}
-                  </div>
+                  
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                   <h3 className="text-xl font-bold text-white mb-2 urban-font">
                     {category.name}
                   </h3>
-                  <div className="w-16 h-1 bg-red-500 mx-auto group-hover:w-24 transition-all duration-300"></div>
-                </div>
-              </div>
+                  <div className="w-16 h-1 bg-red-500 mx-auto group-hover:w-24 transition-all duration-300">
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
             ))}
-          </div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
         ) : (
           <MenuItemsView category={selectedCategory} />
         )}
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
     </section>
   );
 
@@ -393,13 +1651,81 @@ const App = () => {
             </svg>
             Retour aux catégories
           </button>
-        </div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
         <div className="text-center mb-12">
           <h3 className="text-4xl font-bold text-white mb-4 urban-font">
             {categoryData?.name}
           </h3>
-          <div className="w-24 h-1 bg-red-500 mx-auto"></div>
+          <div className="w-24 h-1 bg-red-500 mx-auto">
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
           
           {/* Add info about sauces and supplements for Viandes category */}
           {category === 'viandes' && (
@@ -409,14 +1735,116 @@ const App = () => {
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Blanche • Ketchup • Algérienne • Mayo • Biggy Burger • Curry • Barbecue • Harissa • Samouraï • Andalouse • Poivre • Thaï Chili
                 </p>
-              </div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
               <div className="bg-yellow-900/20 backdrop-blur-md border border-yellow-500/30 rounded-lg p-6">
                 <h4 className="text-xl font-bold text-yellow-500 mb-3 urban-font">Suppléments (+1€)</h4>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   Bacon • Cheddar • Chèvre • Raclette
                 </p>
-              </div>
-            </div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
           )}
           
           {/* Add note for Bowls Indiens */}
@@ -425,9 +1853,77 @@ const App = () => {
               <p className="text-yellow-400 text-sm italic">
                 * À la carte uniquement - pas de menu disponible
               </p>
-            </div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
           )}
-        </div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
         <div className="grid gap-6">
           {items.map((item, index) => (
@@ -440,15 +1936,219 @@ const App = () => {
                   <p className="text-gray-400 text-sm">
                     {item.ingredients}
                   </p>
-                </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                 <div className="text-2xl font-bold text-red-500 ml-4">
                   {item.price}
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+          ))}
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
     );
   };
 
@@ -460,7 +2160,41 @@ const App = () => {
           <h2 className="text-5xl font-bold text-white mb-4 urban-font">
             <span className="text-red-500">Contact</span> & Localisation
           </h2>
-        </div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Info */}
@@ -476,15 +2210,151 @@ const App = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <span className="text-white">4 Rue du Midi, 31270 Frouzins</span>
-                </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                 <div className="flex items-center">
                   <svg className="w-6 h-6 text-red-500 mr-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                   <span className="text-white">05 67 22 60 55</span>
-                </div>
-              </div>
-            </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
             <div className="contact-info-card">
               <h3 className="text-2xl font-bold text-white mb-6 urban-font">
@@ -494,33 +2364,339 @@ const App = () => {
                 <div className="flex justify-between">
                   <span>Lundi</span>
                   <span className="text-red-500">11h00 - 15h00 / 17h30 - 23h00</span>
-                </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                 <div className="flex justify-between">
                   <span>Mardi</span>
                   <span className="text-red-500">11h00 - 15h00 / 17h30 - 23h00</span>
-                </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                 <div className="flex justify-between">
                   <span>Mercredi</span>
                   <span className="text-red-500">11h00 - 15h00 / 17h30 - 23h00</span>
-                </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                 <div className="flex justify-between">
                   <span>Jeudi</span>
                   <span className="text-red-500">11h00 - 15h00 / 17h30 - 23h00</span>
-                </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                 <div className="flex justify-between">
                   <span>Vendredi</span>
                   <span className="text-red-500">11h00 - 15h00 / 17h30 - 00h00</span>
-                </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                 <div className="flex justify-between">
                   <span>Samedi</span>
                   <span className="text-red-500">11h00 - 15h00 / 17h30 - 00h00</span>
-                </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
                 <div className="flex justify-between">
                   <span>Dimanche</span>
                   <span className="text-red-500">17h30 - 00h00</span>
-                </div>
-              </div>
-            </div>
+                
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
             {/* Social Media */}
             <div className="contact-info-card">
@@ -548,9 +2724,111 @@ const App = () => {
                     <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.748-1.378 0 0-.599 2.282-.744 2.840-.282 1.088-1.037 2.455-1.548 3.285C9.394 23.815 10.682 24.001 12.017 24.001c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
                   </svg>
                 </a>
-              </div>
-            </div>
-          </div>
+              
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+            
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
           {/* Map */}
           <div className="h-96 bg-gray-800 rounded-lg overflow-hidden">
@@ -564,9 +2842,111 @@ const App = () => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Original Fried Chicken Location"
             ></iframe>
-          </div>
-        </div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
     </section>
   );
 
@@ -578,7 +2958,41 @@ const App = () => {
           <h2 className="text-5xl font-bold text-white mb-4 urban-font">
             Mentions <span className="text-red-500">Légales</span>
           </h2>
-        </div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
 
         <div className="prose prose-invert max-w-none">
           <div className="legal-content">
@@ -596,9 +3010,111 @@ const App = () => {
 
             <h3>Cookies</h3>
             <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de tracking n'est utilisé.</p>
-          </div>
-        </div>
+          
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
       </div>
+    ))}
+  </div>
+</section>
+
+</div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
+      
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
     </section>
   );
 
@@ -617,9 +3133,77 @@ const App = () => {
           <p className="text-gray-400">
             © 2024 Original Fried Chicken - Tous droits réservés
           </p>
-        </div>
+        
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
       </footer>
-    </div>
+    
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {[
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
+      { name: "BURGERS", img: "burgers.jpg" },
+      { name: "TEX-MEX", img: "texmex.jpg" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+    ].map((cat, index) => (
+      <div
+        key={index}
+        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        style={{
+          backgroundImage: `url('/images/categories/${cat.img}')`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </div>
+    ))}
+  </div>
+</section>
+
+</div>
   );
 };
 

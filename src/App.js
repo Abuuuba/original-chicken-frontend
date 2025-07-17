@@ -609,40 +609,6 @@ const MenuItemsView = ({ category }) => {
           </p>
         </div>
       </footer>
-    
-<section className="py-12 px-6 text-center text-white">
-  <h2 className="text-4xl font-bold urban-font mb-4">
-    NOTRE <span className="text-red-600">CARTE</span>
-  </h2>
-  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
-
-  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-    {[
-      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
-      { name: "BURGERS", img: "burgers.jpg" },
-      { name: "TEX-MEX", img: "texmex.jpg" },
-      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
-      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
-      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
-      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
-      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
-    ].map((cat, index) => (
-      <div
-        key={index}
-        className="menu-category-card relative bg-cover bg-center text-white h-48 flex items-center justify-center rounded-xl overflow-hidden transition-all duration-300"
-        style={{
-          backgroundImage: `url('/images/categories/${cat.img}')`
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
-        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
-          {cat.name}
-        </h3>
-      </div>
-    ))}
-  </div>
-</section>
-
 </div>
   );
 };

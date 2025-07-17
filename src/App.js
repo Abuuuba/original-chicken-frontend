@@ -8,6 +8,7 @@ import Salades from "./pages/salades";
 import Famille from "./pages/famille";
 import Indian from "./pages/indian";
 import Desserts from "./pages/desserts";
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
@@ -583,27 +584,28 @@ const MenuItemsView = ({ category }) => {
 
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     {[
-      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg" },
-      { name: "BURGERS", img: "burgers.jpg" },
-      { name: "TEX-MEX", img: "texmex.jpg" },
-      { name: "TACOS & SANDWICHES", img: "tacos.jpg" },
-      { name: "ASSIETTES & SALADES", img: "salades.jpg" },
-      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg" },
-      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg" },
-      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg" },
+      { name: "VIANDES & COMPOSITIONS", img: "viandes.jpg", path: "/menu/viandes" },
+      { name: "BURGERS", img: "burgers.jpg", path: "/menu/burgers" },
+      { name: "TEX-MEX", img: "texmex.jpg", path: "/menu/texmex" },
+      { name: "TACOS & SANDWICHES", img: "tacos.jpg", path: "/menu/tacos" },
+      { name: "ASSIETTES & SALADES", img: "salades.jpg", path: "/menu/salades" },
+      { name: "MENUS FAMILLE & OFFRES GROUPE", img: "famille.jpg", path: "/menu/famille" },
+      { name: "SPÉCIALITÉ INDIAN BOWLS", img: "indian.jpg", path: "/menu/indian" },
+      { name: "BOISSONS, DESSERTS ET MENU ENFANTS", img: "desserts.jpg", path: "/menu/desserts" },
     ].map((cat, index) => (
-      <div
-        key={index}
-        className="menu-category-card relative bg-cover bg-center text-white h-48 flex items-center justify-center rounded-xl overflow-hidden transition-all duration-300"
-        style={{
-          backgroundImage: `url('/images/categories/${cat.img}')`
-        }}
-      >
-        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
-        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
-          {cat.name}
-        </h3>
-      </div>
+      <Link to={cat.path} key={index}>
+        <div
+          className="menu-category-card relative bg-cover bg-center text-white h-48 flex items-center justify-center rounded-xl overflow-hidden transition-all duration-300 hover:scale-[1.02]"
+          style={{
+            backgroundImage: `url('/images/categories/${cat.img}')`
+          }}
+        >
+          <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+          <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+            {cat.name}
+          </h3>
+        </div>
+      </Link>
     ))}
   </div>
 </section>

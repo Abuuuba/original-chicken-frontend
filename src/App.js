@@ -639,7 +639,7 @@ const App = () => {
     ].map((cat, index) => (
       <div
         key={index}
-        className="menu-category-card bg-cover bg-center relative text-white h-48 flex items-center justify-center"
+        className="menu-category-card relative bg-cover bg-center text-white h-48 flex items-center justify-center rounded-xl overflow-hidden transition-all duration-300"
         style={{
           backgroundImage: `url('/images/categories/${cat.img}')`
         }}

@@ -1,5 +1,5 @@
 import React
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } "react-router-dom";
 import Viandes from "./pages/viandes";
 import Burgers from "./pages/burgers";
 import Texmex from "./pages/texmex";

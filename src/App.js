@@ -1,4 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Viandes from "./pages/viandes";
+import Burgers from "./pages/burgers";
+import Texmex from "./pages/texmex";
+import Tacos from "./pages/tacos";
+import Salades from "./pages/salades";
+import Famille from "./pages/famille";
+import Indian from "./pages/indian";
+import Desserts from "./pages/desserts";
+, { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
@@ -255,6 +265,18 @@ const App = () => {
         </div>
       </div>
     </section>
+
+<Routes>
+  <Route path="/menu/viandes" element={<Viandes />} />
+  <Route path="/menu/burgers" element={<Burgers />} />
+  <Route path="/menu/texmex" element={<Texmex />} />
+  <Route path="/menu/tacos" element={<Tacos />} />
+  <Route path="/menu/salades" element={<Salades />} />
+  <Route path="/menu/famille" element={<Famille />} />
+  <Route path="/menu/indian" element={<Indian />} />
+  <Route path="/menu/desserts" element={<Desserts />} />
+</Routes>
+
   );
 
   // Specialties Section
@@ -334,6 +356,18 @@ const App = () => {
         </div>
       </div>
     </section>
+
+<Routes>
+  <Route path="/menu/viandes" element={<Viandes />} />
+  <Route path="/menu/burgers" element={<Burgers />} />
+  <Route path="/menu/texmex" element={<Texmex />} />
+  <Route path="/menu/tacos" element={<Tacos />} />
+  <Route path="/menu/salades" element={<Salades />} />
+  <Route path="/menu/famille" element={<Famille />} />
+  <Route path="/menu/indian" element={<Indian />} />
+  <Route path="/menu/desserts" element={<Desserts />} />
+</Routes>
+
   );
 const MenuItemsView = ({ category }) => {
     const categoryData = menuCategories.find(cat => cat.id === category);
@@ -526,6 +560,18 @@ const MenuItemsView = ({ category }) => {
         </div>
       </div>
     </section>
+
+<Routes>
+  <Route path="/menu/viandes" element={<Viandes />} />
+  <Route path="/menu/burgers" element={<Burgers />} />
+  <Route path="/menu/texmex" element={<Texmex />} />
+  <Route path="/menu/tacos" element={<Tacos />} />
+  <Route path="/menu/salades" element={<Salades />} />
+  <Route path="/menu/famille" element={<Famille />} />
+  <Route path="/menu/indian" element={<Indian />} />
+  <Route path="/menu/desserts" element={<Desserts />} />
+</Routes>
+
   );
 
   // Legal Section
@@ -558,6 +604,18 @@ const MenuItemsView = ({ category }) => {
         </div>
       </div>
     </section>
+
+<Routes>
+  <Route path="/menu/viandes" element={<Viandes />} />
+  <Route path="/menu/burgers" element={<Burgers />} />
+  <Route path="/menu/texmex" element={<Texmex />} />
+  <Route path="/menu/tacos" element={<Tacos />} />
+  <Route path="/menu/salades" element={<Salades />} />
+  <Route path="/menu/famille" element={<Famille />} />
+  <Route path="/menu/indian" element={<Indian />} />
+  <Route path="/menu/desserts" element={<Desserts />} />
+</Routes>
+
   );
 
   return (
@@ -598,6 +656,18 @@ const MenuItemsView = ({ category }) => {
     ))}
   </div>
 </section>
+
+<Routes>
+  <Route path="/menu/viandes" element={<Viandes />} />
+  <Route path="/menu/burgers" element={<Burgers />} />
+  <Route path="/menu/texmex" element={<Texmex />} />
+  <Route path="/menu/tacos" element={<Tacos />} />
+  <Route path="/menu/salades" element={<Salades />} />
+  <Route path="/menu/famille" element={<Famille />} />
+  <Route path="/menu/indian" element={<Indian />} />
+  <Route path="/menu/desserts" element={<Desserts />} />
+</Routes>
+
 <ContactSection />
       <LegalSection />
       
@@ -613,4 +683,5 @@ const MenuItemsView = ({ category }) => {
   );
 };
 
+</Route></Routes></Router>
 export default App;

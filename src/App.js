@@ -8,7 +8,6 @@ import Salades from "./pages/salades";
 import Famille from "./pages/famille";
 import Indian from "./pages/indian";
 import Desserts from "./pages/desserts";
-import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {

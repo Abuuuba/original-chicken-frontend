@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 
-// 1. Données catégories (image dans public/images/categories/)
+// -- 1. Données catégories (image dans public/images/categories/)
 const menuCategories = [
   { id: 'viandes', name: 'Viandes & Compositions', img: 'viandes.jpg' },
   { id: 'burgers', name: 'Burgers', img: 'burgers.jpg' },
@@ -13,7 +13,7 @@ const menuCategories = [
   { id: 'boissons', name: 'Boissons & Desserts et menu enfants', img: 'desserts.jpg' }
 ];
 
-// 2. Données produits
+// -- 2. Données produits (comme avant)
 const menuItems = {
   viandes: [
     { name: 'Kebab', price: 'Coin Compositions', ingredients: 'Viande Kebab fraîche' },
@@ -43,12 +43,12 @@ const menuItems = {
     { name: 'Bouchées Camembert', price: '5p 4€ / 10p 7€', ingredients: 'Bouchées de camembert panées' },
     { name: 'Onion Rings', price: '5p 3€ / 10p 6€', ingredients: 'Rondelles d\'oignon croustillantes' },
     { name: 'Mozza Sticks', price: '5p 4€ / 10p 6,50€', ingredients: 'Bâtonnets de mozzarella panés' },
-    { name: 'Samoussa', price: '2p 3€ / 5p 7€', ingredients: 'Samoussa Maison' },      
+    { name: 'Samoussa', price: '2p 3€ / 5p 7€', ingredients: 'Samoussa Maison' },
   ],
   tacos: [
     { name: 'Tacos Simple', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Tacos avec 1 viande au choix' },
     { name: 'Tacos Double', price: '8€ (Seul) / 9,50€ (Frites) / 10,50€ (Menu)', ingredients: 'Tacos avec 2 viandes au choix' },
-    { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },      
+    { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },
     { name: 'Tacos XL', price: '10,50€ (Seul) / 11,50€ (Frites) / 12,50€ (Menu)', ingredients: 'Grand tacos avec 3 viandes au choix' },
     { name: 'Sandwich', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Sandwich avec viande au choix. Choix de pain : Pain Naan, Pain Naan Fromage, Pain Rond, Galette, Panini' }
   ],
@@ -58,8 +58,8 @@ const menuItems = {
     { name: 'Chicken Tandori (Spécialité de Grillades cuit au Four TANDOOR)' , price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
     { name: 'KING Chicken Tandori (Spécialité de Grillades cuit au Four TANDOOR)', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
     { name: 'Assiette Simple', price: '10€ (Seul) / 12€ (Menu)', ingredients: '1 viande au choix, Tomates, Olives ou Frites+ Oignons frits' },
-    { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives ou Frites + Oignons frits' }, 
-    { name: 'supplements', price: 'naan ou naan garlic 2,50€' },       
+    { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives ou Frites + Oignons frits' },
+    { name: 'supplements', price: 'naan ou naan garlic 2,50€' },
   ],
   famille: [
     { name: 'Family 1', price: '25,90€', ingredients: '35 Wings + 4 Frites + 1,5L boisson' },
@@ -76,7 +76,7 @@ const menuItems = {
     { name: 'Chicken Tikka Masala Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Tikka, Sauce parfumée aux amandes, Légèrement sucrée' },
     { name: 'Butter Chicken Bowl', price: '11,90€', ingredients: 'Riz Pulao + Butter Chicken, Beurre légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
     { name: 'Chicken Kurma Bowl', price: '11,90€', ingredients: 'Riz Pulao + Kurma Chicken légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
-    { name: 'supplements', price: 'naan ou naan garlic 2,50€ / Riz petit 3€/ Riz grand 4,50€' },      
+    { name: 'supplements', price: 'naan ou naan garlic 2,50€ / Riz petit 3€/ Riz grand 4,50€' },
   ],
   boissons: [
     { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders + Frites + Caprisun' },
@@ -129,6 +129,37 @@ function App() {
     </nav>
   );
 
+  // HERO (Accueil)
+  const HeroSection = () => (
+    <section
+      className="relative w-full min-h-[55vh] flex items-center justify-center"
+      style={{
+        backgroundImage: `url(/images/accueil.jpg)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
+      {/* Overlay assombri, doux */}
+      <div className="absolute inset-0 bg-black/35" />
+      <div className="relative z-10 w-full flex flex-col items-center justify-center text-center py-12">
+        <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold urban-font mb-4 drop-shadow-lg">
+          <span className="block text-white tracking-widest" style={{letterSpacing: '.06em'}}>ORIGINAL FRIED</span>
+          <span className="block text-red-500 tracking-widest" style={{letterSpacing: '.08em'}}>CHICKEN</span>
+        </h1>
+        <p className="text-lg sm:text-2xl mb-6 font-semibold text-yellow-300 drop-shadow">
+          Le meilleur chicken street de Frouzins
+        </p>
+        <a
+          href="#menus"
+          className="inline-block bg-red-600 hover:bg-red-700 text-white font-bold rounded px-7 py-3 shadow-lg transition-colors text-lg"
+          style={{letterSpacing: '.03em'}}
+        >
+          Voir nos menus
+        </a>
+      </div>
+    </section>
+  );
+
   // CATEGORIES
   const MenuCategoriesSection = () => (
     <section id="menus" className="py-12 px-2 sm:px-4 md:py-20 bg-gray-900 relative mt-16">
@@ -156,7 +187,8 @@ function App() {
               <div
                 className="absolute inset-0"
                 style={{
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0.1) 100%)'
+                  // Overlay plus clair pour images visibles
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.32) 60%, rgba(0,0,0,0.03) 100%)'
                 }}
               />
               <span className="relative z-10 text-[0.95rem] sm:text-xl font-bold text-white mb-3 sm:mb-6 px-1 sm:px-2 uppercase tracking-wide urban-font drop-shadow-lg text-center">
@@ -190,7 +222,7 @@ function App() {
           {category === 'viandes' && (
             <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-red-900/30 rounded-lg p-5">
-                                <h4 className="text-xl font-bold text-red-400 mb-2">Sauces Gratuites</h4>
+                <h4 className="text-xl font-bold text-red-400 mb-2">Sauces Gratuites</h4>
                 <div className="text-gray-200 text-sm">{saucesGratuites.join(' • ')}</div>
               </div>
               <div className="bg-yellow-900/20 rounded-lg p-5">
@@ -275,7 +307,7 @@ function App() {
     </section>
   );
 
-  // MENTIONS LÉGALES (fidèle à l’original)
+  // MENTIONS LÉGALES
   const LegalSection = () => (
     <section id="legal" className="py-20 bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -317,10 +349,11 @@ function App() {
     </footer>
   );
 
-  // RENDER
+  // RENDER FINAL
   return (
     <div className="App">
       <Navigation />
+      <HeroSection />
       {!selectedCategory ? (
         <MenuCategoriesSection />
       ) : (
@@ -334,3 +367,4 @@ function App() {
 }
 
 export default App;
+             

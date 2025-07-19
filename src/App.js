@@ -200,3 +200,144 @@ function App() {
           {category === 'viandes' && (
             <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
               <
+          {category === 'viandes' && (
+            <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-red-900/30 rounded-lg p-5">
+                <h4 className="text-xl font-bold text-red-400 mb-2">Sauces Gratuites</h4>
+                <div className="text-gray-200 text-sm">{saucesGratuites.join(' • ')}</div>
+              </div>
+              <div className="bg-yellow-900/20 rounded-lg p-5">
+                <h4 className="text-xl font-bold text-yellow-400 mb-2">Suppléments (+1€)</h4>
+                <div className="text-gray-200 text-sm">{supplements.join(' • ')}</div>
+              </div>
+            </div>
+          )}
+          <div className="grid gap-6">
+            {items.map((item, i) => (
+              <div key={i} className="bg-black/70 rounded-xl p-6 shadow flex justify-between items-center">
+                <div>
+                  <h4 className="text-lg font-bold text-white">{item.name}</h4>
+                  <p className="text-gray-400 text-sm">{item.ingredients}</p>
+                </div>
+                <span className="text-xl font-bold text-red-400">{item.price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+  // CONTACT
+  const ContactSection = () => (
+    <section id="contact" className="py-20 bg-black relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-white mb-4 urban-font">
+            <span className="text-red-500">Contact</span> & Localisation
+          </h2>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="space-y-8">
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2 urban-font">
+                Informations de contact
+              </h3>
+              <div className="space-y-2 text-gray-200 text-lg">
+                <div>Adresse : 4 Rue du Midi, 31270 Frouzins</div>
+                <div>Téléphone : 05 67 22 60 55</div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2 urban-font">
+                Horaires d'ouverture
+              </h3>
+              <div className="space-y-1 text-white text-base">
+                <div className="flex justify-between"><span>Lundi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
+                <div className="flex justify-between"><span>Mardi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
+                <div className="flex justify-between"><span>Mercredi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
+                <div className="flex justify-between"><span>Jeudi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
+                <div className="flex justify-between"><span>Vendredi</span><span className="text-red-500">11h-15h / 17h30-00h</span></div>
+                <div className="flex justify-between"><span>Samedi</span><span className="text-red-500">11h-15h / 17h30-00h</span></div>
+                <div className="flex justify-between"><span>Dimanche</span><span className="text-red-500">17h30-00h</span></div>
+              </div>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold text-white mb-2 urban-font">Suivez-nous</h3>
+              <div className="flex space-x-4">
+                <a href="#" className="text-gray-300 hover:text-red-500 text-2xl" title="Instagram">📸</a>
+                <a href="#" className="text-gray-300 hover:text-red-500 text-2xl" title="Facebook">👍</a>
+                <a href="#" className="text-gray-300 hover:text-red-500 text-2xl" title="Snapchat">👻</a>
+              </div>
+            </div>
+          </div>
+          <div className="h-96 bg-gray-800 rounded-lg overflow-hidden">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2889.1234567890123!2d1.3333333333333333!3d43.5!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12aeb85c44fc7431%3A0x78c208b25c76b3a9!2s4%20Rue%20du%20Midi%2C%2031270%20Frouzins%2C%20France!5e0!3m2!1sfr!2sfr!4v1234567890123!5m2!1sfr!2sfr"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Original Fried Chicken Location"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
+  // MENTIONS LÉGALES
+  const LegalSection = () => (
+    <section id="legal" className="py-20 bg-gray-800">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-5xl font-bold text-white mb-4 urban-font">
+            Mentions <span className="text-red-500">Légales</span>
+          </h2>
+        </div>
+        <div className="text-gray-200 text-lg">
+          <p><strong>Raison sociale :</strong> Original Fried Chicken</p>
+          <p><strong>Catégorie :</strong> Restauration rapide</p>
+          <p><strong>Adresse :</strong> 4 Rue du Midi, 31270 Frouzins, France</p>
+          <p><strong>Téléphone :</strong> 05 67 22 60 55</p>
+          <p>Le contenu de ce site web est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+          <p>Conformément au RGPD, nous nous engageons à protéger vos données personnelles. Les informations collectées via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.</p>
+          <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de tracking n'est utilisé.</p>
+        </div>
+      </div>
+    </section>
+  );
+
+  // FOOTER
+  const Footer = () => (
+    <footer className="bg-black py-8 border-t border-red-600/30">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p className="text-gray-400">
+          © 2024 Original Fried Chicken - Tous droits réservés
+        </p>
+      </div>
+    </footer>
+  );
+
+  // RENDER
+  return (
+    <div className="App">
+      <Navigation />
+      <HeroSection />
+      {!selectedCategory ? (
+        <>
+          <MenuCategoriesSection />
+          <ContactSection />
+          <LegalSection />
+        </>
+      ) : (
+        <MenuItemsView category={selectedCategory} />
+      )}
+      <Footer />
+    </div>
+  );
+}
+
+export default App;

@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import './App.css';
 
-// --- 1. Catégories avec images
 const menuCategories = [
   { id: 'viandes', name: 'Viandes & Compositions', img: 'viandes.jpg' },
   { id: 'burgers', name: 'Burgers', img: 'burgers.jpg' },
@@ -13,7 +12,7 @@ const menuCategories = [
   { id: 'boissons', name: 'Boissons & Desserts et menu enfants', img: 'desserts.jpg' }
 ];
 
-// --- 2. Produits (raccourci ici, mets ta liste complète)
+// Mets ici tous tes produits comme avant :
 const menuItems = {
   viandes: [
     { name: 'Kebab', price: 'Coin Compositions', ingredients: 'Viande Kebab fraîche' },
@@ -24,7 +23,7 @@ const menuItems = {
     { name: 'Cordon bleu', price: 'Coin Compositions', ingredients: 'Escalope panée jambon-fromage' },
     { name: 'Tenders', price: 'Coin Compositions', ingredients: 'Lamelles de poulet croustillantes' }
   ],
-  // ... Ajoute ici toutes les autres catégories (burgers, snacks, etc.) comme avant ...
+  // Ajoute les autres catégories...
 };
 
 const saucesGratuites = [
@@ -37,10 +36,11 @@ const supplements = [
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pressedIdx, setPressedIdx] = useState(null);
 
-  // --- NAVIGATION responsive
+  // --- NAVIGATION
   const Navigation = () => (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-red-600/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-red-600/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <h1 className="text-lg sm:text-2xl font-bold text-red-500 urban-font">Original Fried Chicken</h1>
         <div className="hidden md:flex space-x-6">
@@ -66,7 +66,7 @@ function App() {
         </div>
       </div>
       {menuOpen && (
-        <div className="md:hidden bg-black/95 px-8 py-4 space-y-3">
+        <div className="md:hidden bg-black/85 px-8 py-4 space-y-3 backdrop-blur">
           <button
             onClick={() => {
               setSelectedCategory(null);
@@ -95,7 +95,7 @@ function App() {
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0" style={{background: 'rgba(0,0,0,0.08)'}} />
+      <div className="absolute inset-0" style={{background: 'rgba(255,255,255,0.07)'}} />
       <div className="relative z-10 w-full flex flex-col items-center justify-center text-center py-12">
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold urban-font mb-4 drop-shadow-lg">
           <span className="block text-white tracking-widest" style={{letterSpacing: '.06em', textShadow: '0 2px 12px rgba(0,0,0,0.13)'}}>ORIGINAL FRIED</span>
@@ -115,7 +115,7 @@ function App() {
     </section>
   );
 
-  // --- CATÉGORIES
+  // --- CATÉGORIES AVEC EFFET LUMINEUX & CLICK
   const MenuCategoriesSection = () => (
     <section id="menus" className="py-12 px-2 sm:px-4 md:py-20 bg-gray-900 relative mt-16">
       <div className="max-w-7xl mx-auto">
@@ -128,10 +128,18 @@ function App() {
           </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-6">
-          {menuCategories.map((category) => (
+          {menuCategories.map((category, idx) => (
             <button
               key={category.id}
-              className="relative rounded-xl overflow-hidden shadow-lg group flex flex-col justify-end min-h-[120px] sm:min-h-[180px] md:min-h-[220px] transition-all duration-300 focus:outline-none"
+              onMouseDown={() => setPressedIdx(idx)}
+              onMouseUp={() => setPressedIdx(null)}
+              onMouseLeave={() => setPressedIdx(null)}
+              onTouchStart={() => setPressedIdx(idx)}
+              onTouchEnd={() => setPressedIdx(null)}
+              className={
+                "relative rounded-xl overflow-hidden shadow-lg ring-1 ring-white/20 group flex flex-col justify-end min-h-[120px] sm:min-h-[180px] md:min-h-[220px] transition-all duration-150 focus:outline-none"
+                + (pressedIdx === idx ? " scale-95 ring-4 ring-yellow-300/60 shadow-yellow-200" : "")
+              }
               style={{
                 backgroundImage: `url(/images/categories/${category.img})`,
                 backgroundSize: 'cover',
@@ -140,12 +148,14 @@ function App() {
               onClick={() => setSelectedCategory(category.id)}
             >
               <div
-                className="absolute inset-0"
+                className="absolute inset-0 backdrop-blur-md"
                 style={{
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.03) 100%)'
+                  background: 'linear-gradient(to top, rgba(255,255,255,0.13) 55%, rgba(0,0,0,0.03) 100%)'
                 }}
               />
-              <span className="relative z-10 text-[0.95rem] sm:text-xl font-bold text-white mb-3 sm:mb-6 px-1 sm:px-2 uppercase tracking-wide urban-font drop-shadow-lg text-center">
+              <span className="relative z-10 text-[0.97rem] sm:text-xl font-bold text-white mb-3 sm:mb-6 px-1 sm:px-2 uppercase tracking-wide urban-font drop-shadow-xl text-center"
+                style={{textShadow: "0 2px 18px #000, 0 1px 12px #fff8"}}
+              >
                 {category.name}
               </span>
             </button>
@@ -187,7 +197,7 @@ function App() {
           )}
           <div className="grid gap-6">
             {items.map((item, i) => (
-              <div key={i} className="bg-black/70 rounded-xl p-6 shadow flex justify-between items-center">
+              <div key={i} className="bg-black/50 rounded-xl p-6 shadow flex justify-between items-center">
                 <div>
                   <h4 className="text-lg font-bold text-white">{item.name}</h4>
                   <p className="text-gray-400 text-sm">{item.ingredients}</p>
@@ -261,25 +271,36 @@ function App() {
     </section>
   );
 
-  // --- MENTIONS LÉGALES (espacement++ version)
+  // --- MENTIONS LÉGALES
   const LegalSection = () => (
     <section id="legal" className="py-20 bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-bold text-white mb-4 urban-font">
             Mentions <span className="text-red-500">Légales</span>
-          </h2>
-        </div>
+                 </div>
         <div className="prose prose-invert max-w-none text-gray-200 text-lg space-y-8">
           <div className="space-y-4">
             <h3>Informations légales</h3>
-            <p><strong>Raison sociale :</strong><br/>Original Fried Chicken</p>
-            <p><strong>Catégorie :</strong><br/>Restauration rapide</p>
-            <p><strong>Adresse :</strong><br/>4 Rue du Midi, 31270 Frouzins, France</p>
-            <p><strong>Téléphone :</strong><br/>05 67 22 60 55</p>
+            <p>
+              <strong>Raison sociale :</strong><br />
+              Original Fried Chicken
+            </p>
+            <p>
+              <strong>Catégorie :</strong><br />
+              Restauration rapide
+            </p>
+            <p>
+              <strong>Adresse :</strong><br />
+              4 Rue du Midi, 31270 Frouzins, France
+            </p>
+            <p>
+              <strong>Téléphone :</strong><br />
+              05 67 22 60 55
+            </p>
           </div>
           <div className="space-y-4">
-                        <h3>Propriété intellectuelle</h3>
+            <h3>Propriété intellectuelle</h3>
             <p>
               Le contenu de ce site web est protégé par le droit d'auteur.<br />
               Toute reproduction, même partielle, est interdite sans autorisation préalable.

@@ -27,7 +27,7 @@ const App = () => {
 
   // Menu categories data
   const menuCategories = [
-    { id: 'viandes', name: 'Viandes & Compositions', img: "viandes.jpg" },
+    { id: 'viandes', name: 'Viandes & Compositions', img: "viandes.jpg", path: "/menu/viandes" },
     { id: 'burgers', name: 'Burgers', icon: '🍔' },
     { id: 'snacks', name: 'TEX-MEX', icon: '🍟' },
     { id: 'tacos', name: 'Tacos & Sandwichs', icon: '🌮' },

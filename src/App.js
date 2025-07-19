@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 
+// 1. Données catégories (image dans public/images/categories/)
 const menuCategories = [
   { id: 'viandes', name: 'Viandes & Compositions', img: 'viandes.jpg' },
   { id: 'burgers', name: 'Burgers', img: 'burgers.jpg' },
@@ -12,6 +13,7 @@ const menuCategories = [
   { id: 'boissons', name: 'Boissons & Desserts et menu enfants', img: 'desserts.jpg' }
 ];
 
+// 2. Données produits
 const menuItems = {
   viandes: [
     { name: 'Kebab', price: 'Coin Compositions', ingredients: 'Viande Kebab fraîche' },
@@ -95,67 +97,55 @@ const supplements = [
 
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  // NAVIGATION
+  // NAVIGATION responsive
   const Navigation = () => (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-red-600/30">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <h1 className="text-2xl font-bold text-red-500 urban-font">
-            Original Fried Chicken
-          </h1>
-          <div className="space-x-6">
-            <button className="text-white hover:text-red-400" onClick={() => setSelectedCategory(null)}>Accueil</button>
-            <a className="text-white hover:text-red-400" href="#menus">Carte</a>
-            <a className="text-white hover:text-red-400" href="#contact">Contact</a>
-            <a className="text-white hover:text-red-400" href="#legal">Mentions légales</a>
-          </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
+        <h1 className="text-lg sm:text-2xl font-bold text-red-500 urban-font">Original Fried Chicken</h1>
+        <div className="hidden md:flex space-x-6">
+          <button className="text-white hover:text-red-400" onClick={() => setSelectedCategory(null)}>Accueil</button>
+          <a className="text-white hover:text-red-400" href="#menus">Carte</a>
+          <a className="text-white hover:text-red-400" href="#contact">Contact</a>
+          <a className="text-white hover:text-red-400" href="#legal">Mentions légales</a>
+        </div>
+        <div className="md:hidden">
+          <button onClick={() => setMenuOpen(!menuOpen)} className="text-white focus:outline-none">
+            <svg className="h-7 w-7" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
         </div>
       </div>
+      {menuOpen && (
+        <div className="md:hidden bg-black/95 px-8 py-4 space-y-3">
+          <button onClick={() => {setSelectedCategory(null); setMenuOpen(false)}} className="block w-full text-white text-lg text-left">Accueil</button>
+          <a href="#menus" className="block w-full text-white text-lg" onClick={()=>setMenuOpen(false)}>Carte</a>
+          <a href="#contact" className="block w-full text-white text-lg" onClick={()=>setMenuOpen(false)}>Contact</a>
+          <a href="#legal" className="block w-full text-white text-lg" onClick={()=>setMenuOpen(false)}>Mentions légales</a>
+        </div>
+      )}
     </nav>
   );
 
-  // HERO
-  const HeroSection = () => (
-    <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
-      <div className="absolute inset-0 z-0">
-        <img 
-          src="https://images.unsplash.com/photo-1608855815815-4edc035e39ad?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzh8MHwxfHNlYXJjaHwxfHxpbmRpYW4lMjBjdXJyeSUyMGJvd2x8ZW58MHx8fHJlZHwxNzUyMzQ3MTE4fDA&ixlib=rb-4.1.0&q=85"
-          alt="Original Chicken - Bols Indiens"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/60"></div>
-        <div className="absolute inset-0 bg-gradient-to-r from-red-900/40 to-transparent"></div>
-      </div>
-      <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-        <h1 className="text-6xl md:text-8xl font-bold mb-6 urban-font text-shadow-lg">
-          ORIGINAL FRIED
-          <span className="block text-red-500 text-shadow-red">CHICKEN</span>
-        </h1>
-        <p className="text-xl md:text-2xl mb-8 font-medium text-yellow-300">
-          Le meilleur chicken street de Frouzins
-        </p>
-      </div>
-    </section>
-  );
-
-  // GRILLE CATEGORIES
+  // CATEGORIES
   const MenuCategoriesSection = () => (
-    <section id="menus" className="py-20 bg-gray-900 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-4 urban-font">
+    <section id="menus" className="py-12 px-2 sm:px-4 md:py-20 bg-gray-900 relative mt-16">
+      <div className="max-w-7xl mx-auto">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-3xl sm:text-5xl font-bold text-white mb-3 urban-font">
             Notre <span className="text-red-500">Carte</span>
           </h2>
-          <p className="text-xl text-gray-300">
+          <p className="text-base sm:text-xl text-gray-300">
             Explorez toutes nos catégories de délices
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-6">
           {menuCategories.map((category) => (
-            <div
+            <button
               key={category.id}
-              className="relative rounded-xl overflow-hidden shadow-lg cursor-pointer group flex items-end justify-center min-h-[220px] transition-all duration-300"
+              className="relative rounded-xl overflow-hidden shadow-lg group flex flex-col justify-end min-h-[120px] sm:min-h-[180px] md:min-h-[220px] transition-all duration-300 focus:outline-none"
               style={{
                 backgroundImage: `url(/images/categories/${category.img})`,
                 backgroundSize: 'cover',
@@ -166,13 +156,13 @@ function App() {
               <div
                 className="absolute inset-0"
                 style={{
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.6) 70%, rgba(0,0,0,0.15) 100%)'
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.7) 80%, rgba(0,0,0,0.1) 100%)'
                 }}
               />
-              <h3 className="relative z-10 text-xl font-bold text-white mb-6 px-2 uppercase tracking-wide urban-font drop-shadow-lg text-center">
+              <span className="relative z-10 text-[0.95rem] sm:text-xl font-bold text-white mb-3 sm:mb-6 px-1 sm:px-2 uppercase tracking-wide urban-font drop-shadow-lg text-center">
                 {category.name}
-              </h3>
-            </div>
+              </span>
+            </button>
           ))}
         </div>
       </div>
@@ -183,7 +173,7 @@ function App() {
   const MenuItemsView = ({ category }) => {
     const items = menuItems[category] || [];
     return (
-      <section className="py-20 bg-gray-900 min-h-[60vh]">
+      <section className="py-20 bg-gray-900 min-h-[60vh] mt-16">
         <div className="max-w-4xl mx-auto px-4">
           <button
             onClick={() => setSelectedCategory(null)}
@@ -198,9 +188,9 @@ function App() {
             {menuCategories.find(cat => cat.id === category)?.name}
           </h3>
           {category === 'viandes' && (
-                        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-red-900/30 rounded-lg p-5">
-                <h4 className="text-xl font-bold text-red-400 mb-2">Sauces Gratuites</h4>
+                                <h4 className="text-xl font-bold text-red-400 mb-2">Sauces Gratuites</h4>
                 <div className="text-gray-200 text-sm">{saucesGratuites.join(' • ')}</div>
               </div>
               <div className="bg-yellow-900/20 rounded-lg p-5">
@@ -225,7 +215,7 @@ function App() {
     );
   };
 
-  // CONTACT
+  // CONTACT + horaires + map
   const ContactSection = () => (
     <section id="contact" className="py-20 bg-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -285,7 +275,7 @@ function App() {
     </section>
   );
 
-  // MENTIONS LÉGALES
+  // MENTIONS LÉGALES (fidèle à l’original)
   const LegalSection = () => (
     <section id="legal" className="py-20 bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -294,14 +284,23 @@ function App() {
             Mentions <span className="text-red-500">Légales</span>
           </h2>
         </div>
-        <div className="text-gray-200 text-lg">
-          <p><strong>Raison sociale :</strong> Original Fried Chicken</p>
-          <p><strong>Catégorie :</strong> Restauration rapide</p>
-          <p><strong>Adresse :</strong> 4 Rue du Midi, 31270 Frouzins, France</p>
-          <p><strong>Téléphone :</strong> 05 67 22 60 55</p>
-          <p>Le contenu de ce site web est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
-          <p>Conformément au RGPD, nous nous engageons à protéger vos données personnelles. Les informations collectées via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.</p>
-          <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de tracking n'est utilisé.</p>
+        <div className="prose prose-invert max-w-none text-gray-200 text-lg">
+          <div>
+            <h3>Informations légales</h3>
+            <p><strong>Raison sociale :</strong> Original Fried Chicken</p>
+            <p><strong>Catégorie :</strong> Restauration rapide</p>
+            <p><strong>Adresse :</strong> 4 Rue du Midi, 31270 Frouzins, France</p>
+            <p><strong>Téléphone :</strong> 05 67 22 60 55</p>
+
+            <h3>Propriété intellectuelle</h3>
+            <p>Le contenu de ce site web est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+
+            <h3>Protection des données</h3>
+            <p>Conformément au RGPD, nous nous engageons à protéger vos données personnelles. Les informations collectées via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.</p>
+
+            <h3>Cookies</h3>
+            <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de tracking n'est utilisé.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -322,13 +321,11 @@ function App() {
   return (
     <div className="App">
       <Navigation />
-      <HeroSection />
       {!selectedCategory ? (
         <MenuCategoriesSection />
       ) : (
         <MenuItemsView category={selectedCategory} />
       )}
-      {/* Toujours visibles sous la grille OU les produits */}
       <ContactSection />
       <LegalSection />
       <Footer />
@@ -337,4 +334,3 @@ function App() {
 }
 
 export default App;
-            

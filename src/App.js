@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 
-// -- 1. Données catégories (image dans public/images/categories/)
+// -- 1. Catégories avec images
 const menuCategories = [
   { id: 'viandes', name: 'Viandes & Compositions', img: 'viandes.jpg' },
   { id: 'burgers', name: 'Burgers', img: 'burgers.jpg' },
@@ -13,7 +13,7 @@ const menuCategories = [
   { id: 'boissons', name: 'Boissons & Desserts et menu enfants', img: 'desserts.jpg' }
 ];
 
-// -- 2. Données produits (comme avant)
+// -- 2. Produits
 const menuItems = {
   viandes: [
     { name: 'Kebab', price: 'Coin Compositions', ingredients: 'Viande Kebab fraîche' },
@@ -99,13 +99,21 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
 
-  // NAVIGATION responsive
+  // --- NAVIGATION responsive
   const Navigation = () => (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-red-600/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <h1 className="text-lg sm:text-2xl font-bold text-red-500 urban-font">Original Fried Chicken</h1>
         <div className="hidden md:flex space-x-6">
-          <button className="text-white hover:text-red-400" onClick={() => setSelectedCategory(null)}>Accueil</button>
+          <button
+            className="text-white hover:text-red-400"
+            onClick={() => {
+              setSelectedCategory(null);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+          >
+            Accueil
+          </button>
           <a className="text-white hover:text-red-400" href="#menus">Carte</a>
           <a className="text-white hover:text-red-400" href="#contact">Contact</a>
           <a className="text-white hover:text-red-400" href="#legal">Mentions légales</a>
@@ -120,7 +128,16 @@ function App() {
       </div>
       {menuOpen && (
         <div className="md:hidden bg-black/95 px-8 py-4 space-y-3">
-          <button onClick={() => {setSelectedCategory(null); setMenuOpen(false)}} className="block w-full text-white text-lg text-left">Accueil</button>
+          <button
+            onClick={() => {
+              setSelectedCategory(null);
+              setMenuOpen(false);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            className="block w-full text-white text-lg text-left"
+          >
+            Accueil
+          </button>
           <a href="#menus" className="block w-full text-white text-lg" onClick={()=>setMenuOpen(false)}>Carte</a>
           <a href="#contact" className="block w-full text-white text-lg" onClick={()=>setMenuOpen(false)}>Contact</a>
           <a href="#legal" className="block w-full text-white text-lg" onClick={()=>setMenuOpen(false)}>Mentions légales</a>
@@ -129,7 +146,7 @@ function App() {
     </nav>
   );
 
-  // HERO (Accueil)
+  // --- HERO ACCUEIL image claire, overlay léger
   const HeroSection = () => (
     <section
       className="relative w-full min-h-[55vh] flex items-center justify-center"
@@ -139,14 +156,14 @@ function App() {
         backgroundPosition: 'center',
       }}
     >
-      {/* Overlay assombri, doux */}
-      <div className="absolute inset-0 bg-black/35" />
+      {/* Overlay très léger */}
+      <div className="absolute inset-0" style={{background: 'rgba(0,0,0,0.08)'}} />
       <div className="relative z-10 w-full flex flex-col items-center justify-center text-center py-12">
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold urban-font mb-4 drop-shadow-lg">
-          <span className="block text-white tracking-widest" style={{letterSpacing: '.06em'}}>ORIGINAL FRIED</span>
-          <span className="block text-red-500 tracking-widest" style={{letterSpacing: '.08em'}}>CHICKEN</span>
+          <span className="block text-white tracking-widest" style={{letterSpacing: '.06em', textShadow: '0 2px 12px rgba(0,0,0,0.13)'}}>ORIGINAL FRIED</span>
+          <span className="block text-red-500 tracking-widest" style={{letterSpacing: '.08em', textShadow: '0 2px 14px rgba(0,0,0,0.15)'}}>CHICKEN</span>
         </h1>
-        <p className="text-lg sm:text-2xl mb-6 font-semibold text-yellow-300 drop-shadow">
+        <p className="text-lg sm:text-2xl mb-6 font-semibold text-yellow-300 drop-shadow" style={{textShadow: '0 1px 10px rgba(0,0,0,0.15)'}}>
           Le meilleur chicken street de Frouzins
         </p>
         <a
@@ -160,7 +177,7 @@ function App() {
     </section>
   );
 
-  // CATEGORIES
+  // --- CATÉGORIES
   const MenuCategoriesSection = () => (
     <section id="menus" className="py-12 px-2 sm:px-4 md:py-20 bg-gray-900 relative mt-16">
       <div className="max-w-7xl mx-auto">
@@ -176,6 +193,9 @@ function App() {
           {menuCategories.map((category) => (
             <button
               key={category.id}
+              className="
+                            <button
+              key={category.id}
               className="relative rounded-xl overflow-hidden shadow-lg group flex flex-col justify-end min-h-[120px] sm:min-h-[180px] md:min-h-[220px] transition-all duration-300 focus:outline-none"
               style={{
                 backgroundImage: `url(/images/categories/${category.img})`,
@@ -187,8 +207,7 @@ function App() {
               <div
                 className="absolute inset-0"
                 style={{
-                  // Overlay plus clair pour images visibles
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.32) 60%, rgba(0,0,0,0.03) 100%)'
+                  background: 'linear-gradient(to top, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.03) 100%)'
                 }}
               />
               <span className="relative z-10 text-[0.95rem] sm:text-xl font-bold text-white mb-3 sm:mb-6 px-1 sm:px-2 uppercase tracking-wide urban-font drop-shadow-lg text-center">
@@ -201,7 +220,7 @@ function App() {
     </section>
   );
 
-  // LISTE PRODUITS D’UNE CATÉGORIE
+  // --- LISTE PRODUITS D’UNE CATÉGORIE
   const MenuItemsView = ({ category }) => {
     const items = menuItems[category] || [];
     return (
@@ -247,7 +266,7 @@ function App() {
     );
   };
 
-  // CONTACT + horaires + map
+  // --- CONTACT + horaires + map
   const ContactSection = () => (
     <section id="contact" className="py-20 bg-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,7 +326,7 @@ function App() {
     </section>
   );
 
-  // MENTIONS LÉGALES
+  // --- MENTIONS LÉGALES
   const LegalSection = () => (
     <section id="legal" className="py-20 bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -338,7 +357,7 @@ function App() {
     </section>
   );
 
-  // FOOTER
+  // --- FOOTER
   const Footer = () => (
     <footer className="bg-black py-8 border-t border-red-600/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -349,7 +368,7 @@ function App() {
     </footer>
   );
 
-  // RENDER FINAL
+  // --- RENDER FINAL
   return (
     <div className="App">
       <Navigation />
@@ -367,4 +386,3 @@ function App() {
 }
 
 export default App;
-             

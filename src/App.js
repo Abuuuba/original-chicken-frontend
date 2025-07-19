@@ -1,4 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Viandes from "./pages/viandes";
+import Burgers from "./pages/burgers";
+import Texmex from "./pages/texmex";
+import Tacos from "./pages/tacos";
+import Salades from "./pages/salades";
+import Famille from "./pages/famille";
+import Indian from "./pages/indian";
+import Desserts from "./pages/desserts";
 import './App.css';
 
 const App = () => {

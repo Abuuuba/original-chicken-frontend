@@ -28,8 +28,6 @@ const App = () => {
   { id: 'famille', name: 'Menus Famille & Groupe', img: '/images/categories/famille.jpg' },
   { id: 'bowls', name: 'Spécialité Indian Bowls', img: '/images/categories/indian.jpg' },
   { id: 'boissons', name: 'Boissons & Desserts', img: '/images/categories/desserts.jpg' }
-];
-
   ];
 
   // Real menu items for each category

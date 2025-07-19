@@ -18,14 +18,14 @@ const App = () => {
 
   // Menu categories data
   const menuCategories = [
-    { id: 'viandes', name: 'Viandes & Compositions', icon: '', img: 'viandes.jpg' },
-    { id: 'burgers', name: 'Burgers', icon: '', img: 'burgers.jpg' },
-    { id: 'snacks', name: 'TEX-MEX', icon: '', img: 'texmex.jpg' },
-    { id: 'tacos', name: 'Tacos & Sandwichs', icon: '', img: 'tacos.jpg' },
-    { id: 'salade', name: 'Assiettes & Salades', icon: '', img: 'salades.jpg' },
-    { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '', img: 'famille.jpg' },
-    { id: 'bowls', name: 'Bowls Indiens', icon: '', img: 'indian.jpg' },
-    { id: 'boissons', name: 'Boissons & Desserts et menu enfants', icon: '', img: 'desserts.jpg' }
+    { id: 'viandes', name: 'Viandes & Compositions', icon: '', img: 'viandes.jpg', img: 'viandes.jpg' },
+    { id: 'burgers', name: 'Burgers', icon: '', img: 'burgers.jpg', img: 'burgers.jpg' },
+    { id: 'snacks', name: 'TEX-MEX', icon: '', img: 'texmex.jpg', img: 'texmex.jpg' },
+    { id: 'tacos', name: 'Tacos & Sandwichs', icon: '', img: 'tacos.jpg', img: 'tacos.jpg' },
+    { id: 'salade', name: 'Assiettes & Salades', icon: '', img: 'salades.jpg', img: 'salades.jpg' },
+    { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '', img: 'famille.jpg', img: 'famille.jpg' },
+    { id: 'bowls', name: 'Bowls Indiens', icon: '', img: 'indian.jpg', img: 'indian.jpg' },
+    { id: 'boissons', name: 'Boissons & Desserts et menu enfants', icon: '', img: 'desserts.jpg', img: 'desserts.jpg' }
   ];
 
   // Real menu items for each category

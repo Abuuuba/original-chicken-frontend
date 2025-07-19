@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 
-// -- 1. Catégories avec images
+// 1. Définition des catégories avec id et image
 const menuCategories = [
   { id: 'viandes', name: 'Viandes & Compositions', img: 'viandes.jpg' },
   { id: 'burgers', name: 'Burgers', img: 'burgers.jpg' },
@@ -9,11 +9,11 @@ const menuCategories = [
   { id: 'tacos', name: 'Tacos & Sandwichs', img: 'tacos.jpg' },
   { id: 'salade', name: 'Assiettes & Salades', img: 'salades.jpg' },
   { id: 'famille', name: 'Menus Famille & Offres Groupe', img: 'famille.jpg' },
-  { id: 'bowls', name: 'Bowls Indiens', img: 'indian.jpg' },
+  { id: 'bowls', name: 'Spécialité Indian Bowls', img: 'indian.jpg' },
   { id: 'boissons', name: 'Boissons & Desserts et menu enfants', img: 'desserts.jpg' }
 ];
 
-// -- 2. Produits
+// 2. Les plats (assure-toi d'avoir le même id pour chaque catégorie !)
 const menuItems = {
   viandes: [
     { name: 'Kebab', price: 'Coin Compositions', ingredients: 'Viande Kebab fraîche' },
@@ -43,7 +43,7 @@ const menuItems = {
     { name: 'Bouchées Camembert', price: '5p 4€ / 10p 7€', ingredients: 'Bouchées de camembert panées' },
     { name: 'Onion Rings', price: '5p 3€ / 10p 6€', ingredients: 'Rondelles d\'oignon croustillantes' },
     { name: 'Mozza Sticks', price: '5p 4€ / 10p 6,50€', ingredients: 'Bâtonnets de mozzarella panés' },
-    { name: 'Samoussa', price: '2p 3€ / 5p 7€', ingredients: 'Samoussa Maison' },
+    { name: 'Samoussa', price: '2p 3€ / 5p 7€', ingredients: 'Samoussa Maison' }
   ],
   tacos: [
     { name: 'Tacos Simple', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Tacos avec 1 viande au choix' },
@@ -55,11 +55,11 @@ const menuItems = {
   salade: [
     { name: 'Salade Tenders', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Tenders, Tomates, Olives, Frites + Oignons frits' },
     { name: 'Salade Tikka', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Poulet Tikka, Tomates, Olives, Frites + Oignons frits' },
-    { name: 'Chicken Tandori (Spécialité de Grillades cuit au Four TANDOOR)' , price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
-    { name: 'KING Chicken Tandori (Spécialité de Grillades cuit au Four TANDOOR)', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
+    { name: 'Chicken Tandori', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
+    { name: 'KING Chicken Tandori', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
     { name: 'Assiette Simple', price: '10€ (Seul) / 12€ (Menu)', ingredients: '1 viande au choix, Tomates, Olives ou Frites+ Oignons frits' },
-    { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives ou Frites + Oignons frits' },
-    { name: 'supplements', price: 'naan ou naan garlic 2,50€' },
+    { name: 'Assiette Royal', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives ou Frites + Oignons frits' },
+    { name: 'supplements', price: 'naan ou naan garlic 2,50€' }
   ],
   famille: [
     { name: 'Family 1', price: '25,90€', ingredients: '35 Wings + 4 Frites + 1,5L boisson' },
@@ -76,7 +76,7 @@ const menuItems = {
     { name: 'Chicken Tikka Masala Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Tikka, Sauce parfumée aux amandes, Légèrement sucrée' },
     { name: 'Butter Chicken Bowl', price: '11,90€', ingredients: 'Riz Pulao + Butter Chicken, Beurre légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
     { name: 'Chicken Kurma Bowl', price: '11,90€', ingredients: 'Riz Pulao + Kurma Chicken légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
-    { name: 'supplements', price: 'naan ou naan garlic 2,50€ / Riz petit 3€/ Riz grand 4,50€' },
+    { name: 'supplements', price: 'naan ou naan garlic 2,50€ / Riz petit 3€/ Riz grand 4,50€' }
   ],
   boissons: [
     { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders + Frites + Caprisun' },
@@ -84,10 +84,11 @@ const menuItems = {
     { name: 'Boissons 1,5L', price: '3€', ingredients: 'Grande bouteille au choix' },
     { name: 'Tiramisu', price: '3€', ingredients: 'Tiramisu maison' },
     { name: 'Naan Nutella', price: '3€', ingredients: 'Pain naan fourré au Nutella' },
-    { name: 'Glace', price: '2,50€', ingredients: 'Glace au choix' },
+    { name: 'Glace', price: '2,50€', ingredients: 'Glace au choix' }
   ]
 };
 
+// Sauces et suppléments
 const saucesGratuites = [
   "Blanche", "Ketchup", "Algérienne", "Mayo", "Biggy Burger", "Curry", "Barbecue", "Harissa", "Samouraï", "Andalouse", "Poivre", "Thaï Chili"
 ];
@@ -98,10 +99,11 @@ const supplements = [
 function App() {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [pressedIdx, setPressedIdx] = useState(null);
 
-  // --- NAVIGATION responsive
+  // --- NAVIGATION ---
   const Navigation = () => (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-red-600/30">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/60 backdrop-blur-lg border-b border-red-600/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
         <h1 className="text-lg sm:text-2xl font-bold text-red-500 urban-font">Original Fried Chicken</h1>
         <div className="hidden md:flex space-x-6">
@@ -127,7 +129,7 @@ function App() {
         </div>
       </div>
       {menuOpen && (
-        <div className="md:hidden bg-black/95 px-8 py-4 space-y-3">
+        <div className="md:hidden bg-black/85 px-8 py-4 space-y-3 backdrop-blur">
           <button
             onClick={() => {
               setSelectedCategory(null);
@@ -146,18 +148,17 @@ function App() {
     </nav>
   );
 
-  // --- HERO ACCUEIL image claire, overlay léger
+  // --- HERO ---
   const HeroSection = () => (
     <section
       className="relative w-full min-h-[55vh] flex items-center justify-center"
       style={{
-        backgroundImage: `url(/images/accueil.jpg)`,
+        backgroundImage: `url(/images/51BBA27D-F11A-4A0E-86CB-2674EBC5E67F.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      {/* Overlay très léger */}
-      <div className="absolute inset-0" style={{background: 'rgba(0,0,0,0.08)'}} />
+      <div className="absolute inset-0" style={{background: 'rgba(255,255,255,0.07)'}} />
       <div className="relative z-10 w-full flex flex-col items-center justify-center text-center py-12">
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold urban-font mb-4 drop-shadow-lg">
           <span className="block text-white tracking-widest" style={{letterSpacing: '.06em', textShadow: '0 2px 12px rgba(0,0,0,0.13)'}}>ORIGINAL FRIED</span>
@@ -177,7 +178,7 @@ function App() {
     </section>
   );
 
-  // --- CATÉGORIES
+  // --- CATEGORIES ---
   const MenuCategoriesSection = () => (
     <section id="menus" className="py-12 px-2 sm:px-4 md:py-20 bg-gray-900 relative mt-16">
       <div className="max-w-7xl mx-auto">
@@ -190,27 +191,30 @@ function App() {
           </p>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-6">
-          {menuCategories.map((category) => (
+          {menuCategories.map((category, idx) => (
             <button
               key={category.id}
-              className="
-                            <button
-              key={category.id}
-              className="relative rounded-xl overflow-hidden shadow-lg group flex flex-col justify-end min-h-[120px] sm:min-h-[180px] md:min-h-[220px] transition-all duration-300 focus:outline-none"
+              onMouseDown={() => setPressedIdx(idx)}
+              onMouseUp={() => setPressedIdx(null)}
+              onMouseLeave={() => setPressedIdx(null)}
+              onClick={() => {
+                setSelectedCategory(category.id);
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' });
+                }, 80);
+              }}
+              className={`relative h-36 sm:h-44 md:h-56 rounded-xl overflow-hidden flex items-end group transition-transform shadow-lg focus:outline-none ring-0 ring-red-400
+                ${pressedIdx === idx ? 'scale-95 brightness-90' : 'hover:scale-105 hover:brightness-105'}`}
               style={{
                 backgroundImage: `url(/images/categories/${category.img})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
+                transition: 'all .2s cubic-bezier(.4,0,.2,1)'
               }}
-              onClick={() => setSelectedCategory(category.id)}
             >
-              <div
-                className="absolute inset-0"
-                style={{
-                  background: 'linear-gradient(to top, rgba(0,0,0,0.15) 60%, rgba(0,0,0,0.03) 100%)'
-                }}
-              />
-              <span className="relative z-10 text-[0.95rem] sm:text-xl font-bold text-white mb-3 sm:mb-6 px-1 sm:px-2 uppercase tracking-wide urban-font drop-shadow-lg text-center">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/25 to-transparent transition-all"></div>
+              <span className="relative z-10 w-full text-center block py-2 px-3 text-base sm:text-lg font-bold urban-font uppercase tracking-wide text-white drop-shadow"
+                style={{textShadow:'0 2px 9px #222, 0 2px 12px rgba(0,0,0,0.16)',letterSpacing:'.05em'}}>
                 {category.name}
               </span>
             </button>
@@ -220,44 +224,59 @@ function App() {
     </section>
   );
 
-  // --- LISTE PRODUITS D’UNE CATÉGORIE
+  // --- AFFICHAGE DES PLATS D'UNE CATÉGORIE ---
   const MenuItemsView = ({ category }) => {
+    const categoryData = menuCategories.find(cat => cat.id === category);
     const items = menuItems[category] || [];
+
     return (
-      <section className="py-20 bg-gray-900 min-h-[60vh] mt-16">
-        <div className="max-w-4xl mx-auto px-4">
+      <section className="min-h-[70vh] py-12 bg-gray-900">
+        <div className="max-w-5xl mx-auto">
           <button
             onClick={() => setSelectedCategory(null)}
-            className="mb-8 flex items-center text-red-500 hover:text-red-400 transition-colors font-semibold"
+            className="mb-8 flex items-center text-red-500 hover:text-red-400 transition-colors font-semibold text-lg"
           >
             <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
-            Retour aux catégories
+            Retour à la carte
           </button>
-          <h3 className="text-4xl font-bold text-white mb-6 urban-font text-center">
-            {menuCategories.find(cat => cat.id === category)?.name}
-          </h3>
+          <div className="text-center mb-6">
+            <h3 className="text-3xl sm:text-4xl font-bold text-white mb-2 urban-font">
+              {categoryData?.name}
+            </h3>
+            <div className="w-20 h-1 bg-red-500 mx-auto"></div>
+          </div>
+          {/* Viandes : infos sauces et suppléments */}
           {category === 'viandes' && (
-            <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-red-900/30 rounded-lg p-5">
-                <h4 className="text-xl font-bold text-red-400 mb-2">Sauces Gratuites</h4>
-                <div className="text-gray-200 text-sm">{saucesGratuites.join(' • ')}</div>
+            <div className="my-8 max-w-2xl mx-auto space-y-6">
+              <div className="bg-red-900/20 backdrop-blur border border-red-500/30 rounded-lg p-5">
+                <h4 className="text-lg font-bold text-red-400 mb-2">Sauces Gratuites</h4>
+                <p className="text-gray-300 text-sm">{saucesGratuites.join(" • ")}</p>
               </div>
-              <div className="bg-yellow-900/20 rounded-lg p-5">
-                <h4 className="text-xl font-bold text-yellow-400 mb-2">Suppléments (+1€)</h4>
-                <div className="text-gray-200 text-sm">{supplements.join(' • ')}</div>
+              <div className="bg-yellow-900/10 backdrop-blur border border-yellow-500/20 rounded-lg p-5">
+                <h4 className="text-lg font-bold text-yellow-400 mb-2">Suppléments (+1€)</h4>
+                <p className="text-gray-300 text-sm">{supplements.join(" • ")}</p>
               </div>
             </div>
           )}
-          <div className="grid gap-6">
-            {items.map((item, i) => (
-              <div key={i} className="bg-black/70 rounded-xl p-6 shadow flex justify-between items-center">
+          {category === 'bowls' && (
+            <div className="mt-6 text-center">
+              <p className="text-yellow-400 text-sm italic">
+                * À la carte uniquement - pas de menu disponible
+              </p>
+            </div>
+          )}
+          <div className="grid gap-5 mt-10">
+            {items.map((item, idx) => (
+              <div key={idx} className="bg-black/70 backdrop-blur-md rounded-xl p-5 flex flex-col sm:flex-row justify-between items-start sm:items-center border border-red-600/15 shadow">
                 <div>
-                  <h4 className="text-lg font-bold text-white">{item.name}</h4>
-                  <p className="text-gray-400 text-sm">{item.ingredients}</p>
+                  <h4 className="text-lg font-bold text-white urban-font mb-1">{item.name}</h4>
+                  <p className="text-gray-300 text-sm">{item.ingredients}</p>
                 </div>
-                <span className="text-xl font-bold text-red-400">{item.price}</span>
+                <div className="text-xl font-bold text-red-400 ml-0 sm:ml-5 mt-2 sm:mt-0 whitespace-nowrap">
+                  {item.price}
+                </div>
               </div>
             ))}
           </div>
@@ -266,7 +285,7 @@ function App() {
     );
   };
 
-  // --- CONTACT + horaires + map
+  // --- CONTACT ---
   const ContactSection = () => (
     <section id="contact" className="py-20 bg-black relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -281,16 +300,16 @@ function App() {
               <h3 className="text-2xl font-bold text-white mb-2 urban-font">
                 Informations de contact
               </h3>
-              <div className="space-y-2 text-gray-200 text-lg">
-                <div>Adresse : 4 Rue du Midi, 31270 Frouzins</div>
-                <div>Téléphone : 05 67 22 60 55</div>
+              <div className="space-y-4 text-gray-200 text-lg">
+                <div><strong>Adresse&nbsp;:</strong> 4 Rue du Midi, 31270 Frouzins</div>
+                <div><strong>Téléphone&nbsp;:</strong> 05 67 22 60 55</div>
               </div>
             </div>
             <div>
               <h3 className="text-2xl font-bold text-white mb-2 urban-font">
                 Horaires d'ouverture
               </h3>
-              <div className="space-y-1 text-white text-base">
+              <div className="space-y-2 text-white text-base">
                 <div className="flex justify-between"><span>Lundi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
                 <div className="flex justify-between"><span>Mardi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
                 <div className="flex justify-between"><span>Mercredi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
@@ -326,7 +345,7 @@ function App() {
     </section>
   );
 
-  // --- MENTIONS LÉGALES
+  // --- LEGAL ---
   const LegalSection = () => (
     <section id="legal" className="py-20 bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -335,29 +354,31 @@ function App() {
             Mentions <span className="text-red-500">Légales</span>
           </h2>
         </div>
-        <div className="prose prose-invert max-w-none text-gray-200 text-lg">
-          <div>
-            <h3>Informations légales</h3>
-            <p><strong>Raison sociale :</strong> Original Fried Chicken</p>
-            <p><strong>Catégorie :</strong> Restauration rapide</p>
-            <p><strong>Adresse :</strong> 4 Rue du Midi, 31270 Frouzins, France</p>
-            <p><strong>Téléphone :</strong> 05 67 22 60 55</p>
-
-            <h3>Propriété intellectuelle</h3>
-            <p>Le contenu de ce site web est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
-
-            <h3>Protection des données</h3>
-            <p>Conformément au RGPD, nous nous engageons à protéger vos données personnelles. Les informations collectées via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.</p>
-
-            <h3>Cookies</h3>
-            <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de tracking n'est utilisé.</p>
+        <div className="prose prose-invert max-w-none">
+          <div className="legal-content space-y-5 text-gray-100">
+            <div><strong>Raison sociale&nbsp;:</strong> <span className="ml-1">Original Fried Chicken</span></div>
+            <div><strong>Catégorie&nbsp;:</strong> <span className="ml-1">Restauration rapide</span></div>
+            <div><strong>Adresse&nbsp;:</strong> <span className="ml-1">4 Rue du Midi, 31270 Frouzins, France</span></div>
+            <div><strong>Téléphone&nbsp;:</strong> <span className="ml-1">05 67 22 60 55</span></div>
+            <div className="pt-3">
+              <strong>Propriété intellectuelle</strong>
+              <p>Le contenu de ce site web est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+            </div>
+            <div>
+              <strong>Protection des données</strong>
+              <p>Conformément au RGPD, nous nous engageons à protéger vos données personnelles. Les informations collectées via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.</p>
+            </div>
+            <div>
+              <strong>Cookies</strong>
+              <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de tracking n'est utilisé.</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
   );
 
-  // --- FOOTER
+  // --- FOOTER ---
   const Footer = () => (
     <footer className="bg-black py-8 border-t border-red-600/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -368,16 +389,18 @@ function App() {
     </footer>
   );
 
-  // --- RENDER FINAL
+  // --- RENDER ---
   return (
-    <div className="App">
+    <div className="App bg-black min-h-screen">
       <Navigation />
-      <HeroSection />
-      {!selectedCategory ? (
-        <MenuCategoriesSection />
-      ) : (
-        <MenuItemsView category={selectedCategory} />
+      <div style={{ paddingTop: 68 }}></div>
+      {!selectedCategory && (
+        <>
+          <HeroSection />
+          <MenuCategoriesSection />
+        </>
       )}
+      {selectedCategory && <MenuItemsView category={selectedCategory} />}
       <ContactSection />
       <LegalSection />
       <Footer />

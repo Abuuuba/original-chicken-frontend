@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 
+// Données catégories ET produits
 const menuCategories = [
   { id: 'viandes', name: 'Viandes & Compositions', img: 'viandes.jpg' },
   { id: 'burgers', name: 'Burgers', img: 'burgers.jpg' },
@@ -12,27 +13,51 @@ const menuCategories = [
   { id: 'boissons', name: 'Boissons & Desserts et menu enfants', img: 'desserts.jpg' }
 ];
 
-function App() {
-  const [currentSection, setCurrentSection] = useState('home');
-  const [selectedCategory, setSelectedCategory] = useState(null);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+// Produits par catégorie
+const menuItems = {
+  viandes: [
+    { name: 'Kebab', price: '6,50€', ingredients: 'Viande Kebab fraîche' },
+    { name: 'Chicken Tikka Masala', price: '7,50€', ingredients: 'Poulet mariné aux épices indiennes' },
+    { name: 'Nugget', price: '5,50€', ingredients: 'Nuggets de poulet croustillants' },
+    { name: 'Steak haché', price: '7,00€', ingredients: 'Steak haché 100% bœuf' },
+    { name: 'Falafel', price: '6,00€', ingredients: 'Boulettes de pois chiches végétariennes' },
+    { name: 'Cordon bleu', price: '7,00€', ingredients: 'Escalope panée jambon-fromage' },
+    { name: 'Tenders', price: '6,50€', ingredients: 'Lamelles de poulet croustillantes' },
+  ],
+  burgers: [
+    { name: 'Cheese Burger', price: '5,50€', ingredients: 'Steak, Cheddar, Salade, Sauce Biggy' },
+    { name: 'Double Cheese', price: '6,50€', ingredients: 'Double steak, Cheddar, Salade, Sauce Biggy' },
+    { name: 'Tenders Burger', price: '6€', ingredients: 'Tenders, Cheddar, Salade, Mayonnaise' },
+    { name: 'Tower Burger', price: '7€', ingredients: 'Tenders, galette de pomme de terre, Cheddar, Salade, Mayonnaise' },
+  ],
+  // ... (mets ici les autres catégories avec leurs produits)
+};
 
-  // --------- NAVIGATION ---------
+// Sauces & suppléments pour Viandes
+const saucesGratuites = [
+  "Blanche", "Ketchup", "Algérienne", "Mayo", "Biggy Burger", "Curry", "Barbecue", "Harissa", "Samouraï", "Andalouse", "Poivre", "Thaï Chili"
+];
+const supplements = [
+  "Bacon", "Cheddar", "Chèvre", "Raclette"
+];
+
+// ------ Composant App ------
+function App() {
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  // NAVIGATION + HERO
   const Navigation = () => (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-md border-b border-red-600/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
-            <h1 className="text-2xl font-bold text-red-500 urban-font">
-              Original Fried Chicken
-            </h1>
-          </div>
+          <h1 className="text-2xl font-bold text-red-500 urban-font">
+            Original Fried Chicken
+          </h1>
         </div>
       </div>
     </nav>
   );
 
-  // --------- HERO ---------
   const HeroSection = () => (
     <section id="home" className="relative h-screen flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -56,7 +81,7 @@ function App() {
     </section>
   );
 
-  // --------- MENU CATEGORIES (images fond de carte) ---------
+  // -------- Grille Catégories / Images --------
   const MenuCategoriesSection = () => (
     <section id="menus" className="py-20 bg-gray-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,45 +121,56 @@ function App() {
     </section>
   );
 
-  // --------- CONTACT ---------
-  const ContactSection = () => (
-    <section id="contact" className="py-20 bg-black relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-4 urban-font">
-            <span className="text-red-500">Contact</span> & Localisation
-          </h2>
-        </div>
-        {/* Ajoute ici tes infos contact, horaires, etc. */}
-        <div className="text-gray-200 text-lg">
-          <p>Adresse : 4 Rue du Midi, 31270 Frouzins</p>
-          <p>Téléphone : 05 67 22 60 55</p>
-        </div>
-      </div>
-    </section>
-  );
+  // -------- Liste des produits d'une catégorie --------
+  const MenuItemsView = ({ category }) => {
+    const items = menuItems[category] || [];
+    return (
+      <section className="py-20 bg-gray-900 min-h-[60vh]">
+        <div className="max-w-4xl mx-auto px-4">
+          <button
+            onClick={() => setSelectedCategory(null)}
+            className="mb-8 flex items-center text-red-500 hover:text-red-400 transition-colors font-semibold"
+          >
+            <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+            </svg>
+            Retour aux catégories
+          </button>
+          <h3 className="text-4xl font-bold text-white mb-6 urban-font text-center">
+            {menuCategories.find(cat => cat.id === category)?.name}
+          </h3>
 
-  // --------- LEGAL ---------
-  const LegalSection = () => (
-    <section id="legal" className="py-20 bg-gray-800">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-5xl font-bold text-white mb-4 urban-font">
-            Mentions <span className="text-red-500">Légales</span>
-          </h2>
-        </div>
-        <div className="text-gray-200 text-lg">
-          <p><strong>Raison sociale :</strong> Original Fried Chicken</p>
-          <p><strong>Catégorie :</strong> Restauration rapide</p>
-          <p><strong>Adresse :</strong> 4 Rue du Midi, 31270 Frouzins, France</p>
-          <p><strong>Téléphone :</strong> 05 67 22 60 55</p>
-          <p>Le contenu de ce site web est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
-        </div>
-      </div>
-    </section>
-  );
+          {/* Affiche sauces et suppléments seulement pour Viandes */}
+          {category === 'viandes' && (
+            <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-red-900/30 rounded-lg p-5">
+                <h4 className="text-xl font-bold text-red-400 mb-2">Sauces Gratuites</h4>
+                <div className="text-gray-200 text-sm">{saucesGratuites.join(' • ')}</div>
+              </div>
+              <div className="bg-yellow-900/20 rounded-lg p-5">
+                <h4 className="text-xl font-bold text-yellow-400 mb-2">Suppléments (+1€)</h4>
+                <div className="text-gray-200 text-sm">{supplements.join(' • ')}</div>
+              </div>
+            </div>
+          )}
 
-  // --------- FOOTER ---------
+          <div className="grid gap-6">
+            {items.map((item, i) => (
+              <div key={i} className="bg-black/70 rounded-xl p-6 shadow flex justify-between items-center">
+                <div>
+                  <h4 className="text-lg font-bold text-white">{item.name}</h4>
+                  <p className="text-gray-400 text-sm">{item.ingredients}</p>
+                </div>
+                <span className="text-xl font-bold text-red-400">{item.price}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    );
+  };
+
+  // -------- Footer --------
   const Footer = () => (
     <footer className="bg-black py-8 border-t border-red-600/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
@@ -145,14 +181,16 @@ function App() {
     </footer>
   );
 
-  // --------- RENDER ALL ---------
+  // -------- RENDER --------
   return (
     <div className="App">
       <Navigation />
       <HeroSection />
-      <MenuCategoriesSection />
-      <ContactSection />
-      <LegalSection />
+      {!selectedCategory ? (
+        <MenuCategoriesSection />
+      ) : (
+        <MenuItemsView category={selectedCategory} />
+      )}
       <Footer />
     </div>
   );

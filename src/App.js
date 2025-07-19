@@ -1,6 +1,4 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Categorie from './image/Categorie';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 const App = () => {
@@ -20,21 +18,22 @@ const App = () => {
 
   // Menu categories data
   const menuCategories = [
-  { id: 'viandes', name: 'Viandes & Compositions', img: '/images/categories/viandes.jpg' },
-  { id: 'burgers', name: 'Burgers', img: '/images/categories/burgers.jpg' },
-  { id: 'snacks', name: 'TEX-MEX', img: '/images/categories/texmex.jpg' },
-  { id: 'tacos', name: 'Tacos & Sandwichs', img: '/images/categories/tacos.jpg' },
-  { id: 'salade', name: 'Assiettes & Salades', img: '/images/categories/salades.jpg' },
-  { id: 'famille', name: 'Menus Famille & Groupe', img: '/images/categories/famille.jpg' },
-  { id: 'bowls', name: 'Spécialité Indian Bowls', img: '/images/categories/indian.jpg' },
-  { id: 'boissons', name: 'Boissons & Desserts', img: '/images/categories/desserts.jpg' }
-  ];
+  { id: 'viandes', name: 'VIANDES & COMPOSITIONS', img: 'viandes.jpg' },
+  { id: 'burgers', name: 'BURGERS', img: 'burgers.jpg' },
+  { id: 'snacks', name: 'TEX-MEX', img: 'texmex.jpg' },
+  { id: 'tacos', name: 'TACOS & SANDWICHES', img: 'tacos.jpg' },
+  { id: 'salade', name: 'ASSIETTES & SALADES', img: 'salades.jpg' },
+  { id: 'famille', name: 'MENUS FAMILLE & OFFRES GROUPE', img: 'famille.jpg' },
+  { id: 'bowls', name: 'SPÉCIALITÉ INDIAN BOWLS', img: 'indian.jpg' },
+  { id: 'boissons', name: 'BOISSONS, DESSERTS ET MENU ENFANTS', img: 'desserts.jpg' }
+];
 
   // Real menu items for each category
   const menuItems = {
     viandes: [
       { name: 'Kebab', price: 'Coin Compositions', ingredients: 'Viande Kebab fraîche' },
       { name: 'Chicken Tikka Masala', price: 'Coin Compositions', ingredients: 'Poulet mariné aux épices indiennes' },
+      { name: 'Chicken', price: 'Coin Compositions', ingredients: 'Poulet grillé nature' },
       { name: 'Nugget', price: 'Coin Compositions', ingredients: 'Nuggets de poulet croustillants' },
       { name: 'Steak haché', price: 'Coin Compositions', ingredients: 'Steak haché 100% bœuf' },
       { name: 'Falafel', price: 'Coin Compositions', ingredients: 'Boulettes de pois chiches végétariennes' },
@@ -54,7 +53,7 @@ const App = () => {
     ],
     snacks: [
       { name: 'Hot Wings', price: '5p 4€ / 10p 7,50€', ingredients: 'Ailes de poulet épicées (Menu 8€)' },
-      { name: 'Tenders', price: '3p 3,50€ / 5p 5,50€ / 10 pièces 10,50€', ingredients: 'Poulet croustillant Maison (Menu 9€)' },
+      { name: 'Tenders', price: '3p 3,50€ / 5p 5,50€ / 10 pièces 10,50€', ingredients: 'Lamelles de poulet croustillantes (Menu 9€)' },
       { name: 'Nuggets', price: '5p 3,50€ / 10p 6,50€', ingredients: 'Nuggets de poulet (Menu 7€)' },
       { name: 'Nems maison', price: '4p 5€ / 10p 9,50€', ingredients: 'Nems faits maison aux légumes' },
       { name: 'Bouchées Camembert', price: '5p 4€ / 10p 7€', ingredients: 'Bouchées de camembert panées' },
@@ -65,22 +64,22 @@ const App = () => {
     tacos: [
       { name: 'Tacos Simple', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Tacos avec 1 viande au choix' },
       { name: 'Tacos Double', price: '8€ (Seul) / 9,50€ (Frites) / 10,50€ (Menu)', ingredients: 'Tacos avec 2 viandes au choix' },
-      { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },      
       { name: 'Tacos XL', price: '10,50€ (Seul) / 11,50€ (Frites) / 12,50€ (Menu)', ingredients: 'Grand tacos avec 3 viandes au choix' },
-      { name: 'Sandwich', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Sandwich avec viande au choix. Choix de pain : Pain Naan, Pain Naan Fromage, Pain Rond, Galette, Panini' }
+      { name: 'Sandwich', price: '6€ (Seul) / 7€ (Frites) / 8€ (Menu)', ingredients: 'Sandwich avec viande au choix. Choix de pain : Pain Naan, Pain Naan Fromage, Pain Rond, Galette' }
     ],
     salade: [
-      { name: 'Salade Tenders', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Tenders, Tomates, Olives, Frites + Oignons frits' },
-      { name: 'Salade Tikka', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Poulet Tikka, Tomates, Olives, Frites + Oignons frits' },
-      { name: 'Chicken Tandori (Spécialité de Grillades cuit au Four TANDOOR)' , price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
-      { name: 'KING Chicken Tandori (Spécialité de Grillades cuit au Four TANDOOR)', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
-      { name: 'Assiette Simple', price: '10€ (Seul) / 12€ (Menu)', ingredients: '1 viande au choix, Tomates, Olives ou Frites+ Oignons frits' },
-      { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives ou Frites + Oignons frits' }, 
+      { name: 'Salade Tenders', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Tenders, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
+      { name: 'Salade Tikka', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Poulet Tikka, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
+      { name: 'Salade Royal', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
+      { name: 'Chicken Tandori', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Salade, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },
+      { name: 'KING Chicken Tandori', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 Cuisse de poulet Tandoori, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' },
+      { name: 'Assiette Simple', price: '10€ (Seul) / 12€ (Menu)', ingredients: '1 viande au choix, Tomates, Olives, Fêta fraîche, Frites + Oignons frits' },
+      { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives, Fêta fraîche ou Frites + Oignons frits' }, 
       { name: 'supplements', price: 'naan ou naan garlic 2,50€' },       
        ],
     famille: [
       { name: 'Family 1', price: '25,90€', ingredients: '35 Wings + 4 Frites + 1,5L boisson' },
-      { name: 'Family 2', price: '25,90€', ingredients: '18 Tenders + 4 Frites + 1,5L boisson' },
+      { name: 'Family 2', price: '25,90€', ingredients: '18 Tenders + 15 Wings + 1,5L boisson' },
       { name: 'Family 3', price: '25,90€', ingredients: '10 Tenders + 15 Wings + 4 Frites + 1,5L boisson' },
       { name: 'Bucket 1', price: '20,90€', ingredients: '12 Tenders + 2 Frites + 2 Canettes' },
       { name: 'Bucket 2', price: '20,90€', ingredients: '20 Wings + 2 Frites + 2 Canettes' },
@@ -88,7 +87,8 @@ const App = () => {
       { name: 'Party Deal', price: '55€', ingredients: '2 Tenders Burger + 2 Cheese Burger + 2 Tacos Kebab + 8 Tenders + 12 Wings + 6 Frites + 1,5L boisson' }
     ],
     bowls: [
-      { name: 'Chicken Birani Bowl', price: '11,90€', ingredients: 'Riz Pulao + Egg Bhudiya, Cuisson traditionnelle avec riz, ail, oignon, amandes, accompagné de curry de légumes' },
+      { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },
+      { name: 'Birani Bowl', price: '11,90€', ingredients: 'Riz Pulao + Egg Bhudiya, Cuisson traditionnelle avec riz, ail, oignon, amandes, accompagné de curry de légumes' },
       { name: 'Chicken Curry Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Cuisson traditionnelle en sauce curry, avec amandes, yaourt et crème fraîche' },
       { name: 'Chicken Tikka Masala Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Tikka, Sauce parfumée aux amandes, Légèrement sucrée' },
       { name: 'Butter Chicken Bowl', price: '11,90€', ingredients: 'Riz Pulao + Butter Chicken, Beurre légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
@@ -409,7 +409,7 @@ const App = () => {
               <div className="bg-red-900/20 backdrop-blur-md border border-red-500/30 rounded-lg p-6 mb-6">
                 <h4 className="text-xl font-bold text-red-500 mb-3 urban-font">Sauces Gratuites</h4>
                 <p className="text-gray-300 text-sm leading-relaxed">
-                  Blanche • Ketchup • Algérienne • Mayo • Biggy Burger • Curry • Barbecue • Harissa • Samouraï • Andalouse • Poivre • Thaï Chili
+                  Blanche • Ketchup • Algérienne • Mayo • Biggy • Burger • Barbecue • Harissa • Samouraï • Andalouse • Poivre • Thaï Chili
                 </p>
               </div>
               <div className="bg-yellow-900/20 backdrop-blur-md border border-yellow-500/30 rounded-lg p-6">
@@ -626,3 +626,29 @@ const App = () => {
 };
 
 export default App;
+
+
+<section className="py-12 px-6 text-center text-white">
+  <h2 className="text-4xl font-bold urban-font mb-4">
+    NOTRE <span className="text-red-600">CARTE</span>
+  </h2>
+  <p className="mb-8 text-gray-300">Explorez toutes nos catégories de délices</p>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {menuCategories.map((cat) => (
+      <Link
+        to={\`/categorie/\${cat.id}\`}
+        key={cat.id}
+        className="menu-category-card relative bg-cover bg-center text-white h-48 flex items-center justify-center rounded-xl overflow-hidden transition-all duration-300"
+        style={{
+          backgroundImage: \`url('/images/categories/\${cat.img}')\`
+        }}
+      >
+        <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>
+        <h3 className="relative z-10 text-xl font-bold text-shadow-lg text-center px-2 uppercase tracking-wide urban-font">
+          {cat.name}
+        </h3>
+      </Link>
+    ))}
+  </div>
+</section>

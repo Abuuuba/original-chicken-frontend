@@ -20,7 +20,6 @@ const App = () => {
 
   // Menu categories data
   const menuCategories = [
-    const menuCategories = [
   { id: 'viandes', name: 'Viandes & Compositions', img: '/images/categories/viandes.jpg' },
   { id: 'burgers', name: 'Burgers', img: '/images/categories/burgers.jpg' },
   { id: 'snacks', name: 'TEX-MEX', img: '/images/categories/texmex.jpg' },

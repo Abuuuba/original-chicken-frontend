@@ -1,13 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Viandes from "./pages/viandes";
-import Burgers from "./pages/burgers";
-import Texmex from "./pages/texmex";
-import Tacos from "./pages/tacos";
-import Salades from "./pages/salades";
-import Famille from "./pages/famille";
-import Indian from "./pages/indian";
-import Desserts from "./pages/desserts";
+import Categorie from './image/Categorie';
 import './App.css';
 
 const App = () => {
@@ -27,14 +20,17 @@ const App = () => {
 
   // Menu categories data
   const menuCategories = [
-    { id: 'viandes', name: 'Viandes & Compositions', img: "viandes.jpg", path: "/menu/viandes" },
-    { id: 'burgers', name: 'Burgers', icon: '🍔' },
-    { id: 'snacks', name: 'TEX-MEX', icon: '🍟' },
-    { id: 'tacos', name: 'Tacos & Sandwichs', icon: '🌮' },
-    { id: 'salade', name: 'Assiettes & Salades', icon: '🥗' },
-    { id: 'famille', name: 'Menus Famille & Offres Groupe', icon: '👨‍👩‍👧‍👦' },
-    { id: 'bowls', name: 'Spécialité Indian Bowls', icon: '🍛' },
-    { id: 'boissons', name: 'Boissons & Desserts et menu enfants', icon: '🥤' }
+    const menuCategories = [
+  { id: 'viandes', name: 'Viandes & Compositions', img: '/images/categories/viandes.jpg' },
+  { id: 'burgers', name: 'Burgers', img: '/images/categories/burgers.jpg' },
+  { id: 'snacks', name: 'TEX-MEX', img: '/images/categories/texmex.jpg' },
+  { id: 'tacos', name: 'Tacos & Sandwichs', img: '/images/categories/tacos.jpg' },
+  { id: 'salade', name: 'Assiettes & Salades', img: '/images/categories/salades.jpg' },
+  { id: 'famille', name: 'Menus Famille & Groupe', img: '/images/categories/famille.jpg' },
+  { id: 'bowls', name: 'Spécialité Indian Bowls', img: '/images/categories/indian.jpg' },
+  { id: 'boissons', name: 'Boissons & Desserts', img: '/images/categories/desserts.jpg' }
+];
+
   ];
 
   // Real menu items for each category

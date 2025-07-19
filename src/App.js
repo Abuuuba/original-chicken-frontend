@@ -198,10 +198,7 @@ function App() {
             {menuCategories.find(cat => cat.id === category)?.name}
           </h3>
           {category === 'viandes' && (
-            <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
-              <
-          {category === 'viandes' && (
-            <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div className="mb-10 grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-red-900/30 rounded-lg p-5">
                 <h4 className="text-xl font-bold text-red-400 mb-2">Sauces Gratuites</h4>
                 <div className="text-gray-200 text-sm">{saucesGratuites.join(' • ')}</div>
@@ -327,17 +324,17 @@ function App() {
       <Navigation />
       <HeroSection />
       {!selectedCategory ? (
-        <>
-          <MenuCategoriesSection />
-          <ContactSection />
-          <LegalSection />
-        </>
+        <MenuCategoriesSection />
       ) : (
         <MenuItemsView category={selectedCategory} />
       )}
+      {/* Toujours visibles sous la grille OU les produits */}
+      <ContactSection />
+      <LegalSection />
       <Footer />
     </div>
   );
 }
 
 export default App;
+            

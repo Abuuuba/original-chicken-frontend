@@ -637,11 +637,11 @@ export default App;
   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
     {menuCategories.map((cat) => (
       <Link
-        to={\`/categorie/\${cat.id}\`}
+        to={`/categorie/${cat.id}`}
         key={cat.id}
         className="menu-category-card relative bg-cover bg-center text-white h-48 flex items-center justify-center rounded-xl overflow-hidden transition-all duration-300"
         style={{
-          backgroundImage: \`url('/images/categories/\${cat.img}')\`
+          backgroundImage: "url('/images/categories/" + cat.img + "')"
         }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-40 rounded-[inherit]"></div>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 
-// --- 1. Catégories avec images
+// -- 1. Catégories avec images
 const menuCategories = [
   { id: 'viandes', name: 'Viandes & Compositions', img: 'viandes.jpg' },
   { id: 'burgers', name: 'Burgers', img: 'burgers.jpg' },
@@ -13,7 +13,7 @@ const menuCategories = [
   { id: 'boissons', name: 'Boissons & Desserts et menu enfants', img: 'desserts.jpg' }
 ];
 
-// --- 2. Produits (raccourci ici, mets ta liste complète)
+// -- 2. Produits
 const menuItems = {
   viandes: [
     { name: 'Kebab', price: 'Coin Compositions', ingredients: 'Viande Kebab fraîche' },
@@ -24,7 +24,68 @@ const menuItems = {
     { name: 'Cordon bleu', price: 'Coin Compositions', ingredients: 'Escalope panée jambon-fromage' },
     { name: 'Tenders', price: 'Coin Compositions', ingredients: 'Lamelles de poulet croustillantes' }
   ],
-  // ... Ajoute ici toutes les autres catégories (burgers, snacks, etc.) comme avant ...
+  burgers: [
+    { name: 'Cheese Burger', price: '5,50€ (Seul) / 7€ (Menu)', ingredients: 'Steak, Cheddar, Salade, Sauce Biggy' },
+    { name: 'Double Cheese', price: '6,50€ (Seul) / 8€ (Menu)', ingredients: 'Double steak, Cheddar, Salade, Sauce Biggy' },
+    { name: 'Tenders Burger', price: '6€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders, Cheddar, Salade, Mayonnaise' },
+    { name: 'Tower Burger', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Tenders, galette de pomme de terre, Cheddar, Salade, Mayonnaise' },
+    { name: 'Raclette Tower', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Tenders, galette, Raclette, Salade, Sauce Poivre, Sauce Blanche' },
+    { name: 'Original Mix', price: '7,50€ (Seul) / 9€ (Menu)', ingredients: 'Steak + 2 Tenders + Bacon + Salade + Sauces Blanche & Poivre' },
+    { name: 'Naan Burger', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Viande au choix, pain naan, Salade, Sauce' },
+    { name: 'Beef Supreme', price: '7€ (Seul) / 8,50€ (Menu)', ingredients: 'Steak, galette, Cheddar, Salade, Sauce Biggy' },
+    { name: 'Hot Dog', price: '5€ (Seul) / 7,50€ (Menu)', ingredients: 'Tenders crispy maison ou Saucisse crispy maison' }
+  ],
+  snacks: [
+    { name: 'Hot Wings', price: '5p 4€ / 10p 7,50€', ingredients: 'Ailes de poulet épicées (Menu 8€)' },
+    { name: 'Tenders', price: '3p 3,50€ / 5p 5,50€ / 10 pièces 10,50€', ingredients: 'Poulet croustillant Maison (Menu 9€)' },
+    { name: 'Nuggets', price: '5p 3,50€ / 10p 6,50€', ingredients: 'Nuggets de poulet (Menu 7€)' },
+    { name: 'Nems maison', price: '4p 5€ / 10p 9,50€', ingredients: 'Nems faits maison aux légumes' },
+    { name: 'Bouchées Camembert', price: '5p 4€ / 10p 7€', ingredients: 'Bouchées de camembert panées' },
+    { name: 'Onion Rings', price: '5p 3€ / 10p 6€', ingredients: 'Rondelles d\'oignon croustillantes' },
+    { name: 'Mozza Sticks', price: '5p 4€ / 10p 6,50€', ingredients: 'Bâtonnets de mozzarella panés' },
+    { name: 'Samoussa', price: '2p 3€ / 5p 7€', ingredients: 'Samoussa Maison' },
+  ],
+  tacos: [
+    { name: 'Tacos Simple', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Tacos avec 1 viande au choix' },
+    { name: 'Tacos Double', price: '8€ (Seul) / 9,50€ (Frites) / 10,50€ (Menu)', ingredients: 'Tacos avec 2 viandes au choix' },
+    { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },
+    { name: 'Tacos XL', price: '10,50€ (Seul) / 11,50€ (Frites) / 12,50€ (Menu)', ingredients: 'Grand tacos avec 3 viandes au choix' },
+    { name: 'Sandwich', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Sandwich avec viande au choix. Choix de pain : Pain Naan, Pain Naan Fromage, Pain Rond, Galette, Panini' }
+  ],
+  salade: [
+    { name: 'Salade Tenders', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Tenders, Tomates, Olives, Frites + Oignons frits' },
+    { name: 'Salade Tikka', price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Poulet Tikka, Tomates, Olives, Frites + Oignons frits' },
+    { name: 'Chicken Tandori (Spécialité de Grillades cuit au Four TANDOOR)' , price: '10€ (Seul) / 13€ (Menu)', ingredients: 'Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
+    { name: 'KING Chicken Tandori (Spécialité de Grillades cuit au Four TANDOOR)', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 Cuisse de poulet Tandoori, Salade, Tomates, Olives + Oignons frits' },
+    { name: 'Assiette Simple', price: '10€ (Seul) / 12€ (Menu)', ingredients: '1 viande au choix, Tomates, Olives ou Frites+ Oignons frits' },
+    { name: 'Assiette Royal ', price: '12€ (Seul) / 15€ (Menu)', ingredients: '2 viandes au choix, Tomates, Olives ou Frites + Oignons frits' },
+    { name: 'supplements', price: 'naan ou naan garlic 2,50€' },
+  ],
+  famille: [
+    { name: 'Family 1', price: '25,90€', ingredients: '35 Wings + 4 Frites + 1,5L boisson' },
+    { name: 'Family 2', price: '25,90€', ingredients: '18 Tenders + 4 Frites + 1,5L boisson' },
+    { name: 'Family 3', price: '25,90€', ingredients: '10 Tenders + 15 Wings + 4 Frites + 1,5L boisson' },
+    { name: 'Bucket 1', price: '20,90€', ingredients: '12 Tenders + 2 Frites + 2 Canettes' },
+    { name: 'Bucket 2', price: '20,90€', ingredients: '20 Wings + 2 Frites + 2 Canettes' },
+    { name: 'Bucket 3', price: '20,90€', ingredients: '5 Tenders + 10 Wings + 2 Frites + 2 Canettes' },
+    { name: 'Party Deal', price: '55€', ingredients: '2 Tenders Burger + 2 Cheese Burger + 2 Tacos Kebab + 8 Tenders + 12 Wings + 6 Frites + 1,5L boisson' }
+  ],
+  bowls: [
+    { name: 'Chicken Birani Bowl', price: '11,90€', ingredients: 'Riz Pulao + Egg Bhudiya, Cuisson traditionnelle avec riz, ail, oignon, amandes, accompagné de curry de légumes' },
+    { name: 'Chicken Curry Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Cuisson traditionnelle en sauce curry, avec amandes, yaourt et crème fraîche' },
+    { name: 'Chicken Tikka Masala Bowl', price: '10,90€', ingredients: 'Riz Pulao + Poulet Tikka, Sauce parfumée aux amandes, Légèrement sucrée' },
+    { name: 'Butter Chicken Bowl', price: '11,90€', ingredients: 'Riz Pulao + Butter Chicken, Beurre légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
+    { name: 'Chicken Kurma Bowl', price: '11,90€', ingredients: 'Riz Pulao + Kurma Chicken légèrement sucré, sauce à l oignon, amandes, yaourt et crème fraîche' },
+    { name: 'supplements', price: 'naan ou naan garlic 2,50€ / Riz petit 3€/ Riz grand 4,50€' },
+  ],
+  boissons: [
+    { name: 'Menu Enfant', price: '6,50€', ingredients: 'Cheeseburger ou Nuggets ou 3 Tenders + Frites + Caprisun' },
+    { name: 'Boissons 33cl', price: '1,70€', ingredients: 'Coca, Fanta, Sprite, Ice Tea...' },
+    { name: 'Boissons 1,5L', price: '3€', ingredients: 'Grande bouteille au choix' },
+    { name: 'Tiramisu', price: '3€', ingredients: 'Tiramisu maison' },
+    { name: 'Naan Nutella', price: '3€', ingredients: 'Pain naan fourré au Nutella' },
+    { name: 'Glace', price: '2,50€', ingredients: 'Glace au choix' },
+  ]
 };
 
 const saucesGratuites = [
@@ -85,16 +146,17 @@ function App() {
     </nav>
   );
 
-  // --- HERO ACCUEIL
+  // --- HERO ACCUEIL image claire, overlay léger
   const HeroSection = () => (
     <section
       className="relative w-full min-h-[55vh] flex items-center justify-center"
       style={{
-        backgroundImage: `url(/images/51BBA27D-F11A-4A0E-86CB-2674EBC5E67F.png)`,
+        backgroundImage: `url(/images/accueil.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
+      {/* Overlay très léger */}
       <div className="absolute inset-0" style={{background: 'rgba(0,0,0,0.08)'}} />
       <div className="relative z-10 w-full flex flex-col items-center justify-center text-center py-12">
         <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold urban-font mb-4 drop-shadow-lg">
@@ -130,6 +192,9 @@ function App() {
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-6">
           {menuCategories.map((category) => (
             <button
+              key={category.id}
+              className="
+                            <button
               key={category.id}
               className="relative rounded-xl overflow-hidden shadow-lg group flex flex-col justify-end min-h-[120px] sm:min-h-[180px] md:min-h-[220px] transition-all duration-300 focus:outline-none"
               style={{
@@ -216,7 +281,7 @@ function App() {
               <h3 className="text-2xl font-bold text-white mb-2 urban-font">
                 Informations de contact
               </h3>
-              <div className="space-y-4 text-gray-200 text-lg">
+              <div className="space-y-2 text-gray-200 text-lg">
                 <div>Adresse : 4 Rue du Midi, 31270 Frouzins</div>
                 <div>Téléphone : 05 67 22 60 55</div>
               </div>
@@ -225,7 +290,7 @@ function App() {
               <h3 className="text-2xl font-bold text-white mb-2 urban-font">
                 Horaires d'ouverture
               </h3>
-              <div className="space-y-2 text-white text-base">
+              <div className="space-y-1 text-white text-base">
                 <div className="flex justify-between"><span>Lundi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
                 <div className="flex justify-between"><span>Mardi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
                 <div className="flex justify-between"><span>Mercredi</span><span className="text-red-500">11h-15h / 17h30-23h</span></div>
@@ -261,7 +326,7 @@ function App() {
     </section>
   );
 
-  // --- MENTIONS LÉGALES (espacement++ version)
+  // --- MENTIONS LÉGALES
   const LegalSection = () => (
     <section id="legal" className="py-20 bg-gray-800">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -270,34 +335,22 @@ function App() {
             Mentions <span className="text-red-500">Légales</span>
           </h2>
         </div>
-        <div className="prose prose-invert max-w-none text-gray-200 text-lg space-y-8">
-          <div className="space-y-4">
+        <div className="prose prose-invert max-w-none text-gray-200 text-lg">
+          <div>
             <h3>Informations légales</h3>
-            <p><strong>Raison sociale :</strong><br/>Original Fried Chicken</p>
-            <p><strong>Catégorie :</strong><br/>Restauration rapide</p>
-            <p><strong>Adresse :</strong><br/>4 Rue du Midi, 31270 Frouzins, France</p>
-            <p><strong>Téléphone :</strong><br/>05 67 22 60 55</p>
-          </div>
-          <div className="space-y-4">
-                        <h3>Propriété intellectuelle</h3>
-            <p>
-              Le contenu de ce site web est protégé par le droit d'auteur.
-              Toute reproduction, même partielle, est interdite sans autorisation préalable.
-            </p>
-          </div>
-          <div className="space-y-4">
+            <p><strong>Raison sociale :</strong> Original Fried Chicken</p>
+            <p><strong>Catégorie :</strong> Restauration rapide</p>
+            <p><strong>Adresse :</strong> 4 Rue du Midi, 31270 Frouzins, France</p>
+            <p><strong>Téléphone :</strong> 05 67 22 60 55</p>
+
+            <h3>Propriété intellectuelle</h3>
+            <p>Le contenu de ce site web est protégé par le droit d'auteur. Toute reproduction, même partielle, est interdite sans autorisation préalable.</p>
+
             <h3>Protection des données</h3>
-            <p>
-              Conformément au RGPD, nous nous engageons à protéger vos données personnelles.
-              Les informations collectées via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.
-            </p>
-          </div>
-          <div className="space-y-4">
+            <p>Conformément au RGPD, nous nous engageons à protéger vos données personnelles. Les informations collectées via notre formulaire de contact ne sont utilisées que pour répondre à vos demandes.</p>
+
             <h3>Cookies</h3>
-            <p>
-              Ce site utilise des cookies techniques nécessaires à son bon fonctionnement.
-              Aucun cookie de tracking n'est utilisé.
-            </p>
+            <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de tracking n'est utilisé.</p>
           </div>
         </div>
       </div>

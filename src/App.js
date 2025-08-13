@@ -44,7 +44,7 @@ const menuItems = {
     { name: 'Samoussa', price: '2p 3€ / 5p 7€', ingredients: 'Samoussa Maison' }
   ],
   tacos: [
-    { name: 'Choix Viandes', ingredients: 'Kebab / Chicken Tikka Massala / Nuggets / Steack Haché / Falafel / Cordon Bleu / Tenders'}  
+    { name: 'Choix Viandes', ingredients: 'Kebab / Chicken Tikka Massala / Nuggets / Steack Haché / Falafel / Cordon Bleu / Tenders'},  
     { name: 'Tacos Simple', price: '6,50€ (Seul) / 7,50€ (Frites) / 8,50€ (Menu)', ingredients: 'Tacos avec 1 viande au choix' },
     { name: 'Tacos Double', price: '8€ (Seul) / 9,50€ (Frites) / 10,50€ (Menu)', ingredients: 'Tacos avec 2 viandes au choix' },
     { name: 'Tacos Bowl', price: '10,90€', ingredients: '1 viande, Sauce fromagère, Oignons frits, Frites' },
